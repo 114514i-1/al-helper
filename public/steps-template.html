@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建立你的第一个资料文件夹 · AL的助手</title>
+<style>
+:root{--accent:#275ddb;--ink:#243247;--soft:#61728a;--line:#dce4ee}
+*{box-sizing:border-box}body{margin:0;background:#f6f8fb;color:var(--ink);font:16px/1.75 system-ui,"Microsoft YaHei",sans-serif}button,summary{font:inherit;cursor:pointer}button{color:inherit}button:focus-visible,summary:focus-visible{outline:3px solid #8db2ff;outline-offset:3px}
+header{border-bottom:1px solid var(--line);background:#fff}.top,.layout{width:min(1150px,calc(100% - 48px));margin:auto}.top{display:flex;align-items:center;gap:12px;min-height:66px;font-size:21px;font-weight:700}.mark{display:inline-grid;place-items:center;background:var(--accent);color:#fff;border-radius:9px;width:37px;height:37px;font-size:17px}.top small{padding-left:15px;border-left:1px solid var(--line);font-size:14px;font-weight:500;color:var(--soft)}
+.layout{display:grid;grid-template-columns:minmax(225px,270px) minmax(0,1fr);align-items:start;gap:26px;margin:32px auto 58px}.panel,.step,.final{background:white;border:1px solid var(--line);border-radius:15px;padding:24px}.panel{position:sticky;top:22px}.progress-label{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--soft)}.progress-label b{color:var(--accent)}progress{display:block;appearance:none;width:100%;height:7px;border:0;border-radius:8px;background:#e7edf5;margin:9px 0 20px;overflow:hidden}progress::-webkit-progress-bar{background:#e7edf5}progress::-webkit-progress-value{background:var(--accent)}progress::-moz-progress-bar{background:var(--accent)}details summary{font-size:16px;font-weight:700}.step-list{margin:13px 0 0;padding:0;list-style:none}.step-list button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;border-radius:8px;background:none;padding:11px 9px;font-size:14px}.step-list button span{display:grid;place-items:center;flex:0 0 25px;height:25px;border:1px solid #cdd7e5;border-radius:50%;color:var(--soft);font-size:12px}.step-list [aria-current=step]{background:#edf3ff;color:#234eac;font-weight:700}.step-list [aria-current=step] span{background:var(--accent);border-color:var(--accent);color:#fff}.step-list [data-done=true]:not([aria-current=step]) span{background:#e5f5ee;border-color:#badfce;color:#207252}
+article{min-width:0}h1{font-size:clamp(27px,3vw,37px);line-height:1.28;margin:0 0 8px}article>[data-summary]{color:var(--soft);margin:0 0 6px}.meta{font-size:14px;color:var(--soft);margin:0 0 24px}.step,.final{margin-top:15px;padding:clamp(18px,3vw,34px)}h2{margin:0;font-size:25px;line-height:1.45}.step h2:focus,.final h2:focus{outline:0}.step [data-text]{margin:14px 0 18px}.step [data-tip],.step [data-success]{margin:13px 0 0;border-radius:8px;padding:11px 15px;font-size:15px}.step [data-tip]{background:#fff6db;color:#70551e}.step [data-success]{background:#eaf6ef;color:#285c44}.step [data-tip]:before{content:"提示　";font-weight:700}.step [data-success]:before{content:"完成标志　";font-weight:700}.step>small{display:block;font-size:14px;font-weight:700;color:var(--accent);margin-bottom:9px}.controls{display:flex;justify-content:space-between;gap:16px;margin:20px 0}.controls button,.final button{border:1px solid #c5d2e2;border-radius:8px;padding:9px 19px;background:#fff;font-weight:600}.controls .primary,.final button{color:white;border-color:var(--accent);background:var(--accent)}button:disabled{opacity:.42;cursor:default}.demo{margin:15px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden}.demo figcaption{background:#f7f9fc;padding:6px 12px;font-size:13px;color:var(--soft)}.desktop{position:relative;background:#eaf2fe;min-height:150px;padding:17px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}.folder{display:grid;justify-items:center;gap:7px;font-size:13px}.folder i{position:relative;width:49px;height:30px;background:#f4c362;border-radius:0 4px 4px 4px;margin-top:12px}.folder i:before{content:"";position:absolute;top:-6px;left:0;width:23px;height:8px;border-radius:4px 4px 0 0;background:#eaae47}.name{padding:1px 8px;background:white;border:1px solid #7c9fd4}.menu{display:grid;padding:6px 10px;background:#fff;border:1px solid #d2dcec;border-radius:7px;font-size:13px;box-shadow:0 4px 12px #18395312}.menu b{background:#eaf1ff;border-radius:3px;padding:1px 7px;font-weight:600;color:#2452a7}.windowbar{font-size:14px;color:#566b85;padding:7px 14px;background:#f2f6fb;border-bottom:1px solid var(--line)}.filename{border:1px solid var(--line);background:white;border-radius:6px;padding:6px 12px;font-size:14px}.final p{color:var(--soft)}[hidden]{display:none!important}
+@media(max-width:720px){body{font-size:17px}.top,.layout{width:calc(100% - 28px)}.top{min-height:57px}.layout{display:flex;flex-direction:column;gap:17px;margin:17px auto 28px}.panel{position:static;width:100%;padding:14px 17px}.panel progress{margin:8px 0 11px}article{width:100%}.step-list button{padding:8px}.meta{margin-bottom:14px}.controls button{padding:9px 14px}.step h2{font-size:22px}.desktop{padding:15px;min-height:126px}}
+@media print{.top,.panel,.controls,.final{display:none!important}.layout{display:block;width:100%;margin:0}.step[hidden]{display:block!important}.step{break-inside:avoid}}
+:root{--accent:#684bb5;--ink:#2d243f;--soft:#675e76;--line:#d8d1e2}body{background:white}.panel{background:#f5f1fa;border-color:#b9abc9}.step,.final{border-color:#baafc7}.mark{background:#654ba4}.step-list [aria-current=step]{background:#e5dbf5;color:#4c357b}.step-list [aria-current=step] span{background:#674aa4;border-color:#674aa4}.overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.overview>div{border:1px solid #a798b7;border-radius:10px;padding:12px 15px;background:#f0e9fa}.overview>div:nth-child(2){background:#e8f2e9;border-color:#97ac9b}.overview>div:nth-child(3){background:#fbf3db;border-color:#b7a980}.overview small,.overview strong{display:block}.overview small{font-size:12px;color:#594e65}.overview strong{font-size:16px}.desktop{background:#f1edf7}.menu b{background:#eee8f8;color:#54378b}@media(max-width:720px){.overview{gap:7px}.overview>div{padding:9px}.overview strong{font-size:14px}}
+</style>
+</head>
+<body>
+<header data-template-only><div class="top"><span class="mark">AL</span>AL的助手 <small>分步教程</small></div></header>
+<main class="layout">
+<aside class="panel" data-template-only>
+<div class="progress-label"><span>学习进度</span><b id="progressLabel">0%</b></div>
+<progress id="progress" value="0" max="100" aria-label="学习进度"></progress>
+<details id="outline" open><summary>步骤目录</summary><ol class="step-list" id="stepList"></ol></details>
+</aside>
+<!-- 修改正文或复制 section.step 后，目录、进度和前后按钮会自动更新。保留 data-* 属性以便后台导入。 -->
+<article data-al-tutorial="1" data-layout="steps" data-category="入门基础" data-device="电脑" data-minutes="5" data-tags="Windows,文件管理">
+<h1>建立你的第一个资料文件夹</h1>
+<p data-summary>在 Windows 桌面创建一个文件夹，把练习文件放进去，下次就能从同一个位置找到它。</p>
+<div class="overview" data-template-only><div><small>教程分类</small><strong>入门基础</strong></div><div><small>适用设备</small><strong>Windows 电脑</strong></div><div><small>预计用时</small><strong>约 5 分钟</strong></div></div>
+<section class="step" data-block="step"><h2>新建一个文件夹</h2>
+<p data-text>按 Windows 徽标键和 D 回到桌面。在空白处单击鼠标右键，选择“新建”，再选择“文件夹”。</p>
+<figure class="demo" data-template-only><div class="desktop" aria-hidden="true"><div class="folder"><i></i>桌面</div><div class="menu">查看　›<br>排序方式　›<b>新建　›</b></div><div class="menu"><b>文件夹</b>快捷方式</div></div><figcaption>操作示意 · 在“新建”菜单中选择“文件夹”</figcaption></figure>
+<p data-tip>如果右键菜单显示“打开”或“重命名”，可能点中了图标。点击桌面空白处，再打开右键菜单。</p>
+<p data-success>桌面出现一个新文件夹，名称处于选中状态。</p>
+</section>
+<section class="step" data-block="step"><h2>输入容易记住的名字</h2>
+<p data-text>在选中的名称处输入“我的学习资料”，按 Enter 确认。若已退出编辑，先单击选中文件夹，再按 F2 重新命名。</p>
+<figure class="demo" data-template-only><div class="desktop" aria-hidden="true"><div class="folder"><i></i><span class="name">我的学习资料</span></div></div><figcaption>操作示意 · 文件夹名称显示在图标下方</figcaption></figure>
+<p data-success>文件夹下方显示“我的学习资料”。</p>
+</section>
+<section class="step" data-block="step"><h2>放入并检查练习文件</h2>
+<p data-text>选中一个自己的练习文件，按 Ctrl + C 复制。双击打开“我的学习资料”，按 Ctrl + V 粘贴。再双击里面的文件，确认能正常打开。</p>
+<figure class="demo" data-template-only><div class="windowbar">桌面　›　我的学习资料</div><div class="desktop" aria-hidden="true"><div class="filename">▤　练习笔记.txt</div></div><figcaption>操作示意 · 文件出现在目标文件夹里</figcaption></figure>
+<p data-tip>这次练习用“复制”保留原件；请选一个你能辨认的文件。</p>
+<p data-success>从新文件夹可以打开练习文件，原位置的文件也还在。</p>
+</section>
+<div class="controls" data-template-only><button id="previous" type="button">← 上一步</button><button id="next" class="primary" type="button">完成并继续 →</button></div>
+<section id="finished" class="final" data-template-only hidden><h2 tabindex="-1">已完成全部步骤</h2><p>你已经创建并命名了文件夹，还在里面保存了一份练习文件。</p><button id="restart" type="button">从头再练一次</button></section>
+</article></main>
+<script>
+const steps=Array.from(document.querySelectorAll('section[data-block="step"]'));
+const get=id=>document.getElementById(id);
+const key='al-steps:'+location.pathname+':'+document.querySelector('h1').textContent;
+const completed=new Set();
+let current=0;
+try {
+  const saved=JSON.parse(localStorage.getItem(key)||'null');
+  if(saved){for(const n of saved.done||[])if(Number.isInteger(n)&&n>=0&&n<steps.length)completed.add(n);current=Math.max(0,Math.min(Number(saved.current)||0,steps.length));}
+}catch{}
+const buttons=steps.map((step,i)=>{
+  step.id='step-'+(i+1);
+  const title=step.querySelector('h2');title.tabIndex=-1;
+  const label=document.createElement('small');label.setAttribute('data-template-only','');label.textContent='步骤 '+(i+1)+' / '+steps.length;step.prepend(label);
+  const item=document.createElement('li'),btn=document.createElement('button'),number=document.createElement('span');
+  btn.type='button';btn.append(number,document.createTextNode(title.textContent));item.append(btn);get('stepList').append(item);btn.onclick=()=>navigate(i);return btn;
+});
+function indexFromHash(){const match=location.hash.match(/^#step-(\d+)$/);if(match){const index=Number(match[1])-1;if(index>=0&&index<steps.length)return index;}if(location.hash==='#finished'&&completed.size===steps.length)return steps.length;return null;}
+function show(focus=false){
+ const done=current===steps.length;
+ steps.forEach((s,i)=>{s.hidden=i!==current;const b=buttons[i];b.dataset.done=completed.has(i);b.firstChild.textContent=completed.has(i)?'✓':String(i+1);if(i===current)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+ const percent=Math.round(100*completed.size/steps.length);get('progress').value=percent;get('progressLabel').textContent=percent+'%';
+ get('previous').disabled=current===0;get('next').textContent=current===steps.length-1?'完成本步 ✓':'完成并继续 →';
+ document.querySelector('.controls').hidden=done;get('finished').hidden=!done;
+ if(focus)(done?get('finished'):steps[current]).querySelector('h2').focus();
+ try{localStorage.setItem(key,JSON.stringify({done:[...completed],current}));}catch{}
+}
+function navigate(i){current=i;show(true);try{history.replaceState(null,'',i===steps.length?'#finished':'#step-'+(i+1));}catch{}}
+get('previous').onclick=()=>navigate(Math.max(0,current-1));
+get('next').onclick=()=>{completed.add(current);if(completed.size===steps.length)navigate(steps.length);else if(current+1<steps.length)navigate(current+1);else navigate(steps.findIndex((_,i)=>!completed.has(i)));};
+get('restart').onclick=()=>{completed.clear();navigate(0)};
+addEventListener('hashchange',()=>{const i=indexFromHash();if(i!==null){current=i;show(true)}});
+if(matchMedia('(max-width:720px)').matches)get('outline').open=false;
+current=indexFromHash()??(current===steps.length&&completed.size!==steps.length?0:current);show();
+</script>
+</body>
+</html>
+
