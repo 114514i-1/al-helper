@@ -1,0 +1,1 @@
+{"name":"al-helper","private":true,"type":"module","scripts":{"build":"node build.mjs","deploy":"npx wrangler@4 deploy"}}
