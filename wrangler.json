@@ -1,0 +1,8 @@
+{
+  "name": "al-helper",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-11-15",
+  "build": { "command": "node build.mjs" },
+  "d1_databases": [{ "binding": "DB", "database_name": "al-helper-content" }],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "al-helper-media" }]
+}
