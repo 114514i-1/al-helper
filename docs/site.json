@@ -2253,7 +2253,7 @@
       "id": "antigravity-faq",
       "title": "Antigravity 登录、授权和客户端报错速查",
       "category": "fix",
-      "summary": "按原稿编号查找 11 个问题，涵盖登录验证、账号授权、客户端、网络和模型。",
+      "summary": "",
       "device": "通用",
       "minutes": 5,
       "tags": [
@@ -2265,7 +2265,7 @@
       "status": "新发布",
       "order": -1,
       "updated": "2026-11-24",
-      "revision": 3,
+      "revision": 4,
       "updateNote": "补充第 ⑭ 条：核对 Pro 优惠方案包含的模型权益。",
       "blocks": [
         {
