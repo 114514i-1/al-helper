@@ -2069,6 +2069,277 @@
       "updateNote": "补充操作提示",
       "revision": 1,
       "id": "screenshot"
+    },
+    {
+      "id": "gmail-security",
+      "title": "检查 Gmail 登录设备和账号安全",
+      "category": "basic",
+      "summary": "打开 Gmail，点右上角头像，确认是你本人使用的邮箱，再点「管理你的 Google 账号」。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "账号设置"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "核对当前账号",
+          "text": "打开 Gmail，点右上角头像，确认是你本人使用的邮箱，再点「管理你的 Google 账号」。"
+        },
+        {
+          "type": "step",
+          "title": "检查登录设备",
+          "text": "进入「安全性」里的设备列表，逐一核对设备、地点和最近活动。如果有陌生设备，退出该设备并更改密码。"
+        },
+        {
+          "type": "step",
+          "title": "确认恢复方式",
+          "text": "核对辅助邮箱和电话号码，更新为自己能长期使用的联系方式。"
+        },
+        {
+          "type": "step",
+          "title": "开启两步验证",
+          "text": "在「两步验证」中按提示添加第二种验证方式，并将备用码离线保存在安全位置。"
+        }
+      ]
+    },
+    {
+      "id": "antigravity-first-login",
+      "title": "首次登录 Antigravity 并返回客户端",
+      "category": "how",
+      "summary": "打开已安装的 Antigravity，准备好自己的 Google 账号和可以扫码的手机。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "Antigravity"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "准备客户端与手机",
+          "text": "打开已安装的 Antigravity，准备好自己的 Google 账号和可以扫码的手机。"
+        },
+        {
+          "type": "step",
+          "title": "在电脑发起登录",
+          "text": "在欢迎页点击 Next，到登录页选择 Sign in with Google，等待浏览器打开。"
+        },
+        {
+          "type": "step",
+          "title": "选择账号",
+          "text": "核对登录页面属于 Google，选择个人账号，按页面提示输入密码和两步验证码。"
+        },
+        {
+          "type": "step",
+          "title": "保留电脑上的验证页面",
+          "text": "如果出现「请验证您的信息以继续」，保持该标签页打开。没有出现二维码时直接继续授权。"
+        },
+        {
+          "type": "step",
+          "title": "用手机完成确认",
+          "text": "用相机或 Google App 的镜头扫描电脑当前显示的二维码，核对请求后按手机页面操作。"
+        },
+        {
+          "type": "step",
+          "title": "返回电脑",
+          "text": "手机提示返回另一台设备时切回电脑，完成浏览器中的授权。如有「打开 Antigravity」提示，确认后检查客户端是否显示自己的账号。"
+        }
+      ]
+    },
+    {
+      "id": "google-authenticator-change",
+      "title": "为 Gmail 添加或更换身份验证器",
+      "category": "how",
+      "summary": "在 Google 账号的「安全性与登录」中打开「两步验证」。操作时保留当前登录页面和原验证器。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "账号设置"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "打开两步验证",
+          "text": "在 Google 账号的「安全性与登录」中打开「两步验证」。操作时保留当前登录页面和原验证器。"
+        },
+        {
+          "type": "step",
+          "title": "选择身份验证器",
+          "text": "首次设置时点「设置身份验证器」。更换时进入现有身份验证器，选择「更改身份验证器应用」。"
+        },
+        {
+          "type": "step",
+          "title": "在自己的验证器中添加账号",
+          "text": "在手机验证器中点添加，扫描 Google 设置页面的二维码。如果无法扫描，可选择手动输入设置密钥，仅在自己的验证器内输入。"
+        },
+        {
+          "type": "step",
+          "title": "输入新验证码",
+          "text": "切回 Google 设置页，输入新记录显示的 6 位验证码。若刚好过期，等下一组出现再输入。"
+        },
+        {
+          "type": "step",
+          "title": "确认更换完成",
+          "text": "看到 Google 的成功提示后再整理旧记录，妥善保存备用码。"
+        }
+      ]
+    },
+    {
+      "id": "google-family-region",
+      "title": "加入 Google 家庭组时提示地区不符怎么办",
+      "category": "fix",
+      "summary": "打开家庭邀请邮件，核对收件地址。打开邀请时，确认右上角选中的 Google 账号与收件地址一致。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "账号设置"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "确认邀请使用的账号",
+          "text": "打开家庭邀请邮件，核对收件地址。打开邀请时，确认右上角选中的 Google 账号与收件地址一致。"
+        },
+        {
+          "type": "step",
+          "title": "对照地区资料",
+          "text": "在 Google Play 的账号偏好设置中查看国家或地区，再到 payments.google.com 查看设置里的付款资料国家。与家庭管理员确认双方实际居住国家。"
+        },
+        {
+          "type": "step",
+          "title": "处理资料差异",
+          "text": "如果已经搬家，按 Google Play 页面提供的国家变更流程处理。关闭付款资料会影响相关服务，单凭地区报错无法判断是否需要关闭。"
+        },
+        {
+          "type": "step",
+          "title": "重新打开邀请",
+          "text": "地区资料正确后，用收到邀请的账号重新打开邮件。如果仍然失败，记录完整提示，向 Google 家庭组支持查询。"
+        }
+      ]
+    },
+    {
+      "id": "antigravity-faq",
+      "title": "Antigravity 登录、授权和客户端报错速查",
+      "category": "fix",
+      "summary": "看到 Further action is required 时，回到发起登录的浏览器，完成页面要求的验证，再切回客户端。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "Antigravity"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "要求扫码或进一步验证",
+          "text": "看到 Further action is required 时，回到发起登录的浏览器，完成页面要求的验证，再切回客户端。"
+        },
+        {
+          "type": "step",
+          "title": "收不到短信或提示次数过多",
+          "text": "检查国家区号及号码，确认手机能接收短信。如果页面提示尝试次数过多，按提示等待，或选用页面提供的其他验证方式。"
+        },
+        {
+          "type": "step",
+          "title": "设备上限或无法确认身份",
+          "text": "核对当前账号和已登录设备，退出自己不再使用的设备。身份验证失败时，从本人熟悉的设备进入账号恢复流程。"
+        },
+        {
+          "type": "step",
+          "title": "出现 403 或授权后无法使用",
+          "text": "先在浏览器核对账号是否能正常登录，再检查服务资格和组织限制。记录报错出现的位置及原文，便于区分账号问题和客户端问题。"
+        },
+        {
+          "type": "step",
+          "title": "客户端已登录但模型不可用",
+          "text": "确认当前选中的账号、模型和可用额度。重新打开客户端查看状态，仍报错时保留错误消息并反馈。"
+        }
+      ]
+    },
+    {
+      "id": "google-qr-verify",
+      "title": "Google 登录要求手机扫码时怎么操作",
+      "category": "how",
+      "summary": "确认这次登录由你本人发起，保持显示二维码的标签页打开。二维码过期时，只扫描当前页面新显示的码。",
+      "device": "通用",
+      "minutes": 5,
+      "tags": [
+        "Google",
+        "账号设置"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": -1,
+      "updated": "2026-11-24",
+      "revision": 1,
+      "updateNote": "新增分步教程",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "在电脑保留登录页面",
+          "text": "确认这次登录由你本人发起，保持显示二维码的标签页打开。二维码过期时，只扫描当前页面新显示的码。"
+        },
+        {
+          "type": "step",
+          "title": "用手机扫码",
+          "text": "打开手机相机，对准电脑上的二维码。无法识别时，可以在 Google App 中打开镜头再扫描。"
+        },
+        {
+          "type": "step",
+          "title": "按手机显示的流程验证",
+          "text": "打开识别出的 Google 登录页面，核对账号和设备。如页面要求确认或发送短信，先阅读接收方、号码用途和可能的费用，再决定是否继续。"
+        },
+        {
+          "type": "step",
+          "title": "返回原设备检查结果",
+          "text": "手机显示完成或要求返回另一台设备时，切回电脑上的标签页继续登录；只有页面明确要求再次扫码时，才重新扫描。"
+        },
+        {
+          "type": "step",
+          "title": "遇到错误",
+          "text": "如果提示无法验证、次数过多或短信发送失败，记录原文，使用页面提供的其他验证选项或账号恢复入口。"
+        }
+      ]
     }
   ],
   "settings": {
