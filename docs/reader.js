@@ -1,0 +1,111 @@
+import {stepReader} from './guided.js';
+
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safe=v=>{try{if(!v)return '';const u=new URL(v,location.origin);return ['http:','https:'].includes(u.protocol)?esc(u.href):''}catch{return ''}};
+const articleUrl=id=>'/al-helper/?article='+encodeURIComponent(id);
+const modal=document.createElement('dialog');modal.className='reader-dialog';document.body.append(modal);
+const followPanel=document.createElement('aside');followPanel.className='follow-panel';followPanel.hidden=true;document.body.append(followPanel);
+const toast=document.createElement('div');toast.className='reader-toast';toast.setAttribute('role','status');document.body.append(toast);
+let noticeTimer;function notice(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+function dialog(title,body){if(modal.open)modal.close();modal.innerHTML='<div class="modal-top"><h2>'+esc(title)+'</h2><button aria-label="关闭" data-close>×</button></div>'+body;modal.showModal()}
+modal.onclick=e=>{if(e.target===modal||e.target.closest('[data-close]'))modal.close()};
+async function api(path,opts){
+   if(opts)throw new Error('Static website');
+   const r=await fetch('./site.json',{cache:'no-cache'});
+   if(!r.ok)throw new Error('教程加载失败');
+   const data=await r.json();
+   if(path.endsWith('/api/public'))return data;
+   const id=decodeURIComponent(path.split('/').at(-1));
+   const article=data.articles.find(a=>a.id===id);
+   if(!article)throw Object.assign(new Error('教程不存在'),{status:404});
+   return article;
+  }
+const qs=new URLSearchParams(location.search);let site,activeCat=qs.get('category')||'',term=qs.get('q')||'';
+const cats=()=>site.categories.filter(c=>!c.hidden).sort((a,b)=>a.order-b.order);
+const catName=id=>site.categories.find(c=>c.id===id)?.name||'教程';
+const arts=['folder','screenshot','bookmark','zip','phone','search'];
+const glyph=(name)=>({folder:'<path d="M9 24h26l8 9h43v47H9z" fill="#ebaa43"/al-helper/><path d="M15 31h61v36H15z" fill="#fff7db"/al-helper/><path d="M13 39h77L79 82H8z" fill="#f5bf50"/al-helper/>',screenshot:'<path d="M20 32v-9h16m30 0h14v13m0 30v12H65m-32 0H19V62" fill="none" stroke="#fff" stroke-width="6"/al-helper/><path d="m22 62 23-24 13 15 8-7 15 19z" fill="#f9dbb3"/al-helper/><circle cx="66" cy="37" r="6" fill="#ffe6a8"/al-helper/>',bookmark:'<path d="M24 14h55v77L52 75 24 92z" fill="#5e8fdf"/al-helper/><path d="m51 31 5 11 12 1-9 8 3 12-11-6-10 6 2-12-9-8 13-1z" fill="#fff1b3"/al-helper/>',zip:'<rect x="20" y="14" width="63" height="72" rx="5" fill="#d1a2e9"/al-helper/><path d="M50 14v52" stroke="#654c8d" stroke-width="10" stroke-dasharray="4 3"/al-helper/><rect x="45" y="62" width="11" height="12" rx="3" fill="#f5d581"/al-helper/>',phone:'<rect x="28" y="7" width="46" height="83" rx="7" fill="#3a5d62"/al-helper/><rect x="32" y="14" width="38" height="65" rx="3" fill="#e7fbeb"/al-helper/><path d="M39 30h9v9h-9zm16 0h9v9h-9zM39 47h9v9h-9zm16-1h4v5h7v6H54z" fill="#39665b"/al-helper/>',search:'<circle cx="45" cy="43" r="27" fill="#e7f4ff" stroke="#5183ba" stroke-width="8"/al-helper/><path d="m63 65 18 18" stroke="#edb45c" stroke-width="12" stroke-linecap="round"/al-helper/><path d="M31 43a15 15 0 0 1 14-15" fill="none" stroke="white" stroke-width="6"/al-helper/>'})[name];
+function art(id){return '<div class="art-window" aria-hidden="true"><i></i><div class="art-sidebar"></div><div class="art-lines"></div></div><svg aria-hidden="true" class="art-object" viewBox="0 0 100 100">'+glyph(id)+'</svg>'}
+function card(a,i){let key=arts.includes(a.id)?a.id:arts[i%6];return '<a class="tutorial-card" href="'+articleUrl(a.id)+'"><div class="card-cover cover-'+arts.indexOf(key)+'" data-art="'+key+'">'+art(key)+(safe(a.cover)?'<img class="uploaded-cover" src="'+safe(a.cover)+'" alt="" loading="lazy" decoding="async">':'')+(a.status?'<span class="card-status">'+esc(a.status)+'</span>':'')+'</div><div class="card-body"><div class="card-category">'+esc(catName(a.category))+'</div><h3>'+esc(a.title)+'</h3><p>'+esc(a.summary)+'</p><div class="card-meta"><span>▣ '+esc(a.device)+'</span><span>◷ '+esc(a.minutes)+' 分钟</span><time>'+esc(String(a.updated||'').slice(0,10))+'</time></div></div></a>'}
+function routeHtml(full=false){return site.route.map((r,i)=>'<a class="route-item" href="'+(r.articleId?articleUrl(r.articleId):'/al-helper/#catalog')+'"><span class="route-number">'+String(i+1).padStart(2,'0')+'</span><div class="route-copy"><strong>'+esc(r.title)+'</strong><small>'+esc(r.description)+'</small></div><span class="route-arrow">→</span></a>').join('')}
+const faqs=[['第一次来，应该从哪里开始？','先打开“新手入门”，按顺序完成一个小练习。每篇教程顶部都写明了适用设备和准备事项。'],['怎样继续上次看到的步骤？','用同一台设备和浏览器打开原教程，页面会提供“继续上次阅读”入口。清除浏览器数据后，阅读记录也会清除。'],['教程里的画面和我的设备不一样怎么办？','先确认教程标明的设备和软件。你可以在教程底部选择“步骤有变化”，并描述卡住的位置。']];
+function faqHtml(){return faqs.map(([q,a])=>'<details class="faq-row"><summary>'+q+'</summary><p>'+a+'</p></details>').join('')}
+function set(s,html){if($(s))$(s).innerHTML=html}
+const homePreviewCount=6;
+let catalogExpanded=false;
+const intents=[
+ ['注册账号',/注册|账号安全/],['使用 AI 工具',/AI|Codex|Gemini|ChatGPT|模型|智能体/i],['解决报错',/报错|排查|问题|故障/],['学电脑操作',/电脑|文件夹|截屏|截图|浏览器|书签|压缩/]
+];
+let activeIntent='';
+function resumeCard(){
+ try{const r=JSON.parse(localStorage.getItem('al-last-lesson'));const a=site.articles.find(a=>a.id===r?.id);
+ if(!a)return;const n=Math.min(Math.max(1,Number(r.part)||1),a.blocks.length||1);
+ const el=$('#resumeLesson');el.hidden=false;el.innerHTML='<a href="'+articleUrl(a.id)+'#part-'+n+'"><b>继续上次学习 →</b><span>'+esc(a.title)+' · '+esc(a.blocks[n-1]?.title||'上次阅读位置')+'</span></a>';}catch{}
+}
+function rememberPart(a,n){if(qs.has('preview'))return;try{localStorage.setItem('al-last-lesson',JSON.stringify({id:a.id,part:n}))}catch{}}
+function renderCatalog(){
+ const list=site.articles.filter(a=>(!activeCat||a.category===activeCat)&&(!term||[a.title,a.summary,...(a.tags||[]),...(a.blocks||[]).flatMap(b=>[b.title,b.text,b.success,b.tip])].join(' ').toLowerCase().includes(term.toLowerCase())));
+ const matches=intents.find(([name])=>name===activeIntent)?.[1];
+ if(matches)for(let i=list.length-1;i>=0;i--){const a=list[i];if(!matches.test([a.title,a.summary,catName(a.category),...(a.tags||[])].join(' ')))list.splice(i,1);}
+ set('#intentLinks',intents.map(([name])=>'<button data-intent="'+name+'" aria-pressed="'+(activeIntent===name)+'">'+name+' →</button>').join(''));
+ const mode=$('#sort')?.value;list.sort((a,b)=>mode==='newest'?String(b.updated).localeCompare(String(a.updated)):mode==='minutes'?a.minutes-b.minutes:(a.order??99)-(b.order??99));
+ const featured=site.settings.featured||[];
+ if(mode==='rank'&&!term&&!activeCat&&!activeIntent){
+ const rank=id=>featured.includes(id)?featured.indexOf(id):999;
+ list.sort((a,b)=>rank(a.id)-rank(b.id));
+ }
+ const limited=!term&&!activeCat&&!activeIntent;
+ const visible=limited&&!catalogExpanded?list.slice(0,homePreviewCount):list;
+ const more=$('#catalogMore');
+ more.hidden=!limited||list.length<=homePreviewCount;
+ const toggle=more.querySelector('button');
+ toggle.textContent=catalogExpanded?'收起教程':'查看更多教程';
+ toggle.setAttribute('aria-expanded',String(catalogExpanded));
+ more.querySelector('span').textContent='已显示 '+visible.length+' / '+list.length+' 篇';
+ set('#cards',list.length?visible.map(card).join(''):'<div class="reader-empty"><h3>暂时没有找到相关教程</h3><p>试试“截图”等更短的关键词，或选择上方分类重新查找。</p><button data-reset>查看全部教程</button> <button data-feedback>反馈想看的教程</button></div>');
+ set('#filters',[{id:'',name:'全部'},...cats()].map(c=>'<button data-cat="'+esc(c.id)+'" aria-pressed="'+(c.id===activeCat)+'" class="'+(c.id===activeCat?'active':'')+'">'+esc(c.name)+'</button>').join(''))
+}
+function home(){resumeCard();
+ const classic=qs.get('home')==='classic'||(!qs.has('home')&&site.settings.homeLayout==='classic');
+ document.body.classList.toggle('map-home',!classic);
+ const switcher=$('#homeStyle');switcher.href=classic?'/al-helper/?home=map':'/al-helper/?home=classic';switcher.textContent=classic?'导航首页':'原版首页';
+ if(!classic){const title=$('[data-slogan]');title.textContent=title.textContent.replace(/([，,！!？?])\s*/,'$1\n');}
+ document.addEventListener('keydown',e=>{if(e.key==='/al-helper/'&&!modal.open&&!e.target.closest('input,textarea,select,[contenteditable]')){e.preventDefault();$('#searchInput').focus();}});
+ renderCatalog();set('#route',routeHtml());set('#faq',faqHtml());set('#hot',(site.settings.hot||[]).map(h=>'<button data-term="'+esc(h)+'">'+esc(h)+'</button>').join(''));set('#updates',[...site.articles].sort((a,b)=>String(b.updated).localeCompare(String(a.updated))).slice(0,4).map(a=>'<a class="update-row" href="'+articleUrl(a.id)+'"><time>'+esc(String(a.updated).slice(0,10))+'</time><strong>'+esc(a.title)+'</strong><span>'+esc(a.updateNote||'内容更新')+'</span></a>').join(''));if($('#searchInput'))$('#searchInput').value=term}
+function social(){const enabled=(site.settings.social||[]).filter(p=>p.enabled&&(p.account||p.name||p.qr||p.url));const btn=$('#follow');if(!btn)return;btn.hidden=!enabled.length;btn.style.display=enabled.length?'':'none';btn.setAttribute('aria-expanded','false');followPanel.innerHTML='<div class="modal-top"><h2>关注 AL</h2><button data-follow-close aria-label="关闭">×</button></div>'+enabled.map(p=>'<section><strong>'+esc(p.platform==='wechat'?'微信公众号':'抖音')+'</strong><h3>'+esc(p.name)+'</h3>'+(safe(p.qr)?'<button class="zoom-img" data-zoom="'+safe(p.qr)+'"><img alt="二维码" src="'+safe(p.qr)+'"></button>':'')+(p.account?'<p>'+esc(p.account)+' <button data-copy="'+esc(p.account)+'">复制</button></p>':'')+(safe(p.url)?'<a target="_blank" rel="noopener noreferrer" href="'+safe(p.url)+'">查看主页 ↗</a>':'')+'</section>').join('');btn.onclick=()=>{followPanel.hidden=!followPanel.hidden;btn.setAttribute('aria-expanded',String(!followPanel.hidden));if(!followPanel.hidden){const r=btn.getBoundingClientRect();followPanel.style.setProperty('--follow-top',r.bottom+8+'px');followPanel.style.setProperty('--follow-right',Math.max(12,innerWidth-r.right)+'px')}}}
+function extra(){const v=qs.get('view');$('#home').hidden=true;$('#detail').hidden=false;set('#detail','<div class="read-shell"><a href="/al-helper/">← 返回首页</a><h1>'+(v==='faq'?'常见问题':'新手学习路线')+'</h1>'+(v==='faq'?faqHtml():'<div class="route-full">'+routeHtml(true)+'</div>')+'</div>')}
+function blockHTML(b){const txt=esc(b.text).replaceAll('\n','<br>');const img=safe(b.image)?'<button class="zoom-img" data-zoom="'+safe(b.image)+'"><img src="'+safe(b.image)+'" alt="'+esc(b.title||'教程配图')+'"></button>':'';if(b.type==='checklist')return '<div class="prepare"><h3>'+esc(b.title||'准备清单')+'</h3><ul>'+String(b.text||'').split('\n').filter(Boolean).map(l=>'<li>'+esc(l)+'</li>').join('')+'</ul></div>';if(b.type==='related')return '<h3>'+esc(b.title||'相关教程')+'</h3>'+(safe(b.url)?'<a href="'+safe(b.url)+'">'+(txt||'打开教程')+' ↗</a>':txt);return '<div class="read-block '+esc(b.type)+'">'+(b.title?'<h3>'+esc(b.title)+'</h3>':'')+(txt?'<p>'+txt+'</p>':'')+img+(b.video&&safe(b.video)?'<video class="lesson-video" controls playsinline preload="metadata" src="'+safe(b.video)+'"></video>':'')+(b.success?'<p class="read-success">✓ '+esc(b.success)+'</p>':'')+(b.tip?'<p class="read-tip">提示　'+esc(b.tip)+'</p>':'')+'</div>'}
+let shown;function read(a){shown=a;const preview=qs.has('preview');$('#home').hidden=true;$('#detail').hidden=false;document.title=a.title+' · '+site.settings.name;const blocks=a.blocks||[];const toc=blocks.map((b,i)=>b.title?'<a href="#part-'+(i+1)+'">'+esc(b.title)+'</a>':'').join('');let last;try{last=Number(localStorage.getItem('al-progress:'+a.id))}catch{}const next=site.articles.filter(x=>x.id!==a.id);const related=(a.related||[]).map(id=>next.find(x=>x.id===id)).filter(Boolean);
+ set('#detail','<div class="read-shell"><nav class="read-crumb"><a href="/al-helper/">首页</a> › <a href="/al-helper/?category='+encodeURIComponent(a.category)+'#catalog">'+esc(catName(a.category))+'</a> › 当前教程</nav><div class="reading"><aside class="read-aside"><details open id="read-toc"><summary>本文目录</summary>'+toc+'</details></aside><article><div class="read-head">'+(preview?'<small>草稿预览</small>':'')+(String(a.status).includes('失效')?'<p class="read-tip">本教程已标记为失效，请先查看相关教程。</p>':'')+'<h1>'+esc(a.title)+'</h1><p>'+esc(a.summary)+'</p><small>'+esc(a.device)+'　·　约 '+esc(a.minutes)+' 分钟　·　更新于 '+esc(String(a.updated||'').slice(0,10))+'</small></div><div class="read-progress">'+(last>1&&last<=blocks.length?'<a href="#part-'+last+'">继续上次阅读 →</a>　':'')+'阅读位置仅在本设备保存</div><div id="revision-message"></div>'+blocks.map((b,i)=>'<section class="anchored" id="part-'+(i+1)+'">'+blockHTML(b)+'<button class="anchor-link" data-step="'+(i+1)+'" aria-label="复制本节链接">复制本节链接</button> <button class="anchor-link" data-feedback="看不懂" data-part="'+(i+1)+'">这一步遇到问题</button></section>').join('')+'<section class="read-more"><h3>接下来可以学</h3>'+(related.length?related:next.slice(0,2)).map(x=>'<a href="'+articleUrl(x.id)+'">'+esc(x.title)+' →</a>').join('')+'</section><section class="read-more"><h3>这篇教程还有哪里需要改进？</h3>'+['看不懂','步骤有变化','链接打不开'].map(t=>'<button data-feedback="'+t+'">'+t+'</button>').join('')+'</section></article></div><div class="read-tools"><a href="#read-toc">目录</a><button data-top>返回顶部 ↑</button></div></div>');
+ const layout=qs.get('layout')||a.layout||((a.blocks||[]).some(b=>b.type==='step')?'steps':'classic');
+ const guided=layout==='steps'&&blocks.length;
+ const verify=document.createElement('div');verify.className='verification';
+ if(a.verifiedDate)verify.append('最后核验于 '+a.verifiedDate+'　');
+ if(/^https?:\/\//i.test(a.sourceUrl||'')){const link=document.createElement('a');link.href=a.sourceUrl;link.textContent='查看官方来源 ↗';link.target='_blank';link.rel='noopener noreferrer';verify.append(link)}
+ if(verify.childNodes.length)$('.read-head').append(verify);
+ const toggle=document.createElement('a');toggle.className='view-link';const url=new URL(location.href);url.searchParams.set('layout',guided?'classic':'steps');toggle.href=url;toggle.textContent=guided?'切换为原版图文':'切换为分步阅读';$('.read-head').append(document.createElement('br'),toggle);
+ if(innerWidth<740)$('#read-toc').open=false;
+ if(guided)stepReader(a,esc,rememberPart);else{const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){rememberPart(a,Number(e.target.id.slice(5)));try{localStorage.setItem('al-progress:'+a.id,e.target.id.slice(5))}catch{}}},{rootMargin:'0px 0px -55% 0px'});document.querySelectorAll('.anchored').forEach(s=>observer.observe(s));if(/^#part-\d+$/.test(location.hash))requestAnimationFrame(()=>$(location.hash)?.scrollIntoView());}if(!preview)setInterval(async()=>{try{const fresh=await api('/al-helper/api/article/'+encodeURIComponent(a.id));if(fresh.revision!==a.revision)set('#revision-message','<p class="read-tip">本教程已有更新。 <button data-refresh>加载新版</button></p>')}catch(e){if(e.status===410)set('#revision-message','<p class="read-tip">本教程已归档。 <a href="/al-helper/#catalog">查看其他教程</a></p>')}},30000)}
+function fb(type,part){
+   const title=[shown?.title,type||'内容反馈'].filter(Boolean).join(' · ');
+   const url='https://github.com/114514i-1/al-helper/issues/new?title='+encodeURIComponent(title)+'&body='+encodeURIComponent('教程链接 '+location.href+'\n\n请描述遇到的问题');
+   dialog('内容反馈','<p>通过 GitHub 提交反馈需要登录 GitHub 账号。</p><a target="_blank" rel="noopener" href="'+esc(url)+'">打开反馈页面</a>');
+  }
+async function copy(value){try{await navigator.clipboard.writeText(value);notice('已复制')}catch{dialog('复制内容','<label>长按或选中下方内容复制<input readonly value="'+esc(value)+'"></label>');modal.querySelector('input').select()}}
+function filter(t,c,scroll){if($('#home')?.hidden){location.assign('/al-helper/?q='+encodeURIComponent(t)+'&category='+encodeURIComponent(c)+'#catalog');return}activeIntent='';catalogExpanded=false;term=t;activeCat=c;if($('#searchInput'))$('#searchInput').value=t;renderCatalog();if(scroll)$('#catalog')?.scrollIntoView()}
+document.addEventListener('click',e=>{const b=e.target.closest('button,a');if(!followPanel.hidden&&!followPanel.contains(e.target)&&!e.target.closest('#follow')||b?.hasAttribute('data-follow-close')){followPanel.hidden=true;$('#follow')?.setAttribute('aria-expanded','false')}if(!b)return;const d=b.dataset;if('intent'in d){const name=d.intent;filter('','',false);activeIntent=name;renderCatalog();$('#catalog').scrollIntoView()}else if('cat'in d)filter('',d.cat,false);else if('term'in d)filter(d.term,'',true);else if('reset'in d)filter('','',false);else if('feedback'in d){e.preventDefault();fb(d.feedback,d.part)}else if('about'in d||'contact'in d){e.preventDefault();dialog('about'in d?'网站介绍':'联系方式','<p>'+esc('about'in d?site.settings.about:site.settings.contact||'你可以通过内容反馈联系站点管理员。')+'</p>'+('contact'in d?'<button data-feedback>内容反馈</button>':''))}else if('copy'in d)copy(d.copy);else if('step'in d)copy(location.origin+articleUrl(shown.id)+'#part-'+d.step);else if('zoom'in d)dialog('查看大图','<img class="full-image" alt="放大图片" src="'+safe(d.zoom)+'">');else if('top'in d)window.scrollTo(0,0);else if('refresh'in d)location.reload();if(b.getAttribute('href')==='#read-toc')$('#read-toc').open=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){followPanel.hidden=true;$('#follow')?.setAttribute('aria-expanded','false')}});
+$('#catalogMore button')?.addEventListener('click',()=>{
+ catalogExpanded=!catalogExpanded;renderCatalog();
+ if(!catalogExpanded)$('#catalog').scrollIntoView();
+});
+$('#cards')?.addEventListener('error',event=>{if(event.target.matches?.('.uploaded-cover'))event.target.remove()},true);
+$('#searchForm')?.addEventListener('submit',e=>{e.preventDefault();filter($('#searchInput').value.trim(),'',true)});$('#sort')?.addEventListener('change',renderCatalog);
+async function start(){try{site=await api('/al-helper/api/public')}catch{if(qs.has('article')||qs.has('view')){$('#home').hidden=true;$('#detail').hidden=false;set('#detail','<div class="read-shell"><h1>教程暂时无法加载</h1><p>请检查网络后重试。</p><button data-refresh>重新加载</button></div>')}else set('#cards','<div class="reader-empty"><h3>教程暂时无法加载</h3><button data-refresh>重新加载</button></div>');return}const s=site.settings;for(const [attr,k] of [['site-name','name'],['slogan','slogan'],['description','description'],['footer','footer'],['announcement','announcement']])document.querySelectorAll('[data-'+attr+']').forEach(el=>{el.textContent=s[k]||'';if(attr==='announcement')el.hidden=!s[k]});if(s.logo&&safe(s.logo))document.querySelectorAll('[data-site-logo]').forEach(el=>{el.innerHTML='<img alt="" src="'+safe(s.logo)+'" style="width:100%;height:100%;object-fit:contain">'});
+ const currentNav=qs.get('view');document.querySelectorAll('.site-head nav a').forEach(a=>{const active=currentNav?a.getAttribute('href')==='/al-helper/?view='+currentNav:!qs.has('article')&&a.getAttribute('href')==='/al-helper/#catalog';a.classList.toggle('nav-active',active);if(active)a.setAttribute('aria-current','page')});social();if(qs.has('article')){const id=qs.get('article');let a;
+ if(qs.has('preview')){try{const admin=await api('/al-helper/api/admin');const draft=admin.articles.find(r=>r.id===id)?.draft;if(!draft)throw Error();a={...draft,id};}catch{$('#home').hidden=true;$('#detail').hidden=false;set('#detail','<div class="read-shell"><h1>请登录后台查看草稿</h1><a href="/al-helper/admin">进入管理后台</a></div>');return;}}
+ else a=site.articles.find(a=>a.id===id);if(!a){try{a=await api('/al-helper/api/article/'+encodeURIComponent(id))}catch(e){$('#home').hidden=true;$('#detail').hidden=false;set('#detail','<div class="read-shell"><h1>'+(e.status===410?'这篇教程已归档':'找不到这篇教程')+'</h1><p>可以从全部教程中查找其他内容。</p><a href="/al-helper/#catalog">浏览全部教程 →</a></div>');return}}read(a)}else if(['faq','route'].includes(qs.get('view')))extra();else{home();if(location.hash==='#catalog')requestAnimationFrame(()=>$('#catalog')?.scrollIntoView())}}
+start();
+
+

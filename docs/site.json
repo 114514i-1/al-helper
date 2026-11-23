@@ -1,0 +1,2157 @@
+{
+  "articles": [
+    {
+      "title": "ChatGPT Plus 订阅常见问题",
+      "summary": "按付款、网络、实名、充值、学生认证和账户安全查找原稿问答。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "付款与订阅",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "为什么只要 106 元？什么是低价区？",
+          "text": "OpenAI 按订阅地区定价，各区价格不同，菲律宾区属于官方定价里的低价区：Plus 标价 ₱1,100/月，账单地址填美国免税州免税后约 ₱982，折合人民币约 106 元/月。方法是「网页直充」：用自己账号在官网自己付款，只是网络出口在菲律宾，没有中间商。"
+        },
+        {
+          "type": "faq",
+          "title": "低价区的方法稳定吗？会封号吗？",
+          "text": "按教程正常操作，没有出现过因方法本身导致的封号记录。因为这个方法赚的是地区定价的汇率差，账号与付款全程走 OpenAI 官方渠道：不找代充、不提供账号密码、不改账号信息。要守住三条红线：固定菲律宾节点环境、不在免费试用状态做学生认证、一卡一号（见「封号与风控」）。"
+        },
+        {
+          "type": "faq",
+          "title": "点「订阅」显示「支付未获批准」怎么办？",
+          "text": "按顺序排查：① 页面是否处于「免费试用」状态——试用没法直接买，先买 ChatGPT Go 再补差价升级 Plus；② 卡内余额是否够 16 U，不够先充值；③ 是否开了全局代理 + 虚拟网卡，并用 IPPure 确认 IP 是菲律宾；④ 最近换过节点或 IP 的话等 24 小时再试，期间不要发起任何消费；⑤ 换无痕窗口重试，还是不行就过几小时再试，别连续重试扣款。"
+        },
+        {
+          "type": "faq",
+          "title": "页面一直显示「免费试用」，买不了正价 Plus？",
+          "text": "这是目前最常见的卡点：先购买 ChatGPT Go，再从 Go 补差价升级 Plus，不影响最终拿到 Plus。"
+        },
+        {
+          "type": "faq",
+          "title": "交易失败了，为什么还被扣了手续费？",
+          "text": "那是拒付费。余额不足时发起扣款就会产生（20 美元账单约收 0.9 美元），所以卡内余额不够时千万别试扣，平时常留 3–5 U。"
+        },
+        {
+          "type": "faq",
+          "title": "页面显示 ₱1,100，怎么不是 982？",
+          "text": "1,100 PHP 是含 12% VAT 的标价。填完美国免税州账单地址后税额归零，应付约 982 PHP ≈ 105.65 元，以最终确认页为准。"
+        },
+        {
+          "type": "faq",
+          "title": "填了美国地址，怎么还有税？",
+          "text": "逐项检查：全名一栏填了吗？州是免税州吗（如俄勒冈 Oregon）？街道、城市、邮编完整吗？哪一项空着税都不会消失。"
+        },
+        {
+          "type": "faq",
+          "title": "可以用菲律宾本地地址免税吗？",
+          "text": "不行。免税看的是账单地址所在的州，必须是免税州，填菲律宾地址会照收 VAT。"
+        },
+        {
+          "type": "faq",
+          "title": "走 Google Play 订阅能免税吗？",
+          "text": "不能。想免税必须走官网直付；Play 路线不免税，优先官网。"
+        },
+        {
+          "type": "step",
+          "title": "网络与节点",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "付款时网络要怎么设置？",
+          "text": "开全局代理 + 虚拟网卡（TUN 模式），再打开 ippure.com 确认 IP 归属地是菲律宾、原生住宅 IP。只开全局不开 TUN 有小概率支付失败。"
+        },
+        {
+          "type": "faq",
+          "title": "菲律宾节点延迟 200ms 正常吗？",
+          "text": "正常。只要付款那一刻连接稳定就行；节点频繁掉线就先换一个再操作。"
+        },
+        {
+          "type": "faq",
+          "title": "买币安 / 提币时挂什么节点？",
+          "text": "不要挂美国节点，币安限制美区 IP，受限 IP 下甚至无法提币。用香港或台湾节点，到付 ChatGPT 那一步再切回菲律宾。"
+        },
+        {
+          "type": "faq",
+          "title": "付完款能马上换节点吗？",
+          "text": "开通当月尽量固定同一个菲律宾节点环境。频繁换 IP 是触发风控和扣款失败的常见原因。"
+        },
+        {
+          "type": "step",
+          "title": "开卡与实名",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "Sumsub 实名认证，大陆身份证能过吗？",
+          "text": "能，身份证或护照都可以。认证不通过大多是照片模糊，重拍清晰件（四角完整、不反光）再传即可。"
+        },
+        {
+          "type": "faq",
+          "title": "实名和开卡审核要多久？",
+          "text": "实名几分钟到几小时；开卡审核约 10 分钟。"
+        },
+        {
+          "type": "faq",
+          "title": "开卡后卡内余额看不到？",
+          "text": "余额显示有几分钟延迟，刷新等待即可，不要重复申请开卡或重复操作。"
+        },
+        {
+          "type": "faq",
+          "title": "新开的卡要「放几天再用」吗？",
+          "text": "不用，当天就能付款。稳妥的做法是先充 1 美元小额试卡，成功后再去付 Plus。"
+        },
+        {
+          "type": "step",
+          "title": "买 U 与充值",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "到底要充多少 USDT？",
+          "text": "18–19 U（约 121 元）：10 U 开卡首充 + 把卡内补到约 19 U（16 U 付一个月 Plus，3 U 余量）。旧版教程写的 10.05 U 是不够的。"
+        },
+        {
+          "type": "faq",
+          "title": "提币时币种、地址、网络怎么选？",
+          "text": "以 Roogoo 平台内充币教程实时显示为准（当前是 USDT + BSC），币安提币页三项必须与 Roogoo 充币页完全一致。充错网络的链上资产基本找不回。"
+        },
+        {
+          "type": "faq",
+          "title": "币安提币按钮用不了？",
+          "text": "大概率当前 IP 是美国或受限地区，切到香港 / 台湾节点再操作。"
+        },
+        {
+          "type": "faq",
+          "title": "C2C 买 U 时转账备注写什么？",
+          "text": "一律留空。备注出现「买U」「币安」等字样可能被商家退款投诉，且必须用本人实名的支付宝 / 微信付款。"
+        },
+        {
+          "type": "faq",
+          "title": "USDT 充值多久到账？",
+          "text": "链上手续费 0.01 U，一般几分钟到账。超过半小时没到账，先在交易所查提币记录的链上状态，再联系交易所客服。"
+        },
+        {
+          "type": "faq",
+          "title": "剩下的 USDT 能卖回人民币吗？",
+          "text": "Roogoo 平台内不行，余额只能消费。按 18–19 U 充值、花掉约 16 U，剩的 3 U 正好留作卡内余量。"
+        },
+        {
+          "type": "step",
+          "title": "学生认证（SheerID）",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "SheerID 能自己认证成功吗？",
+          "text": "当前审核非常严格、失败率高，主流做法是闲鱼买认证服务（标价 80–100 元），认准商家页面写「不绑卡 仅认证」的才符合你的情况。"
+        },
+        {
+          "type": "faq",
+          "title": "学生认证要多久？",
+          "text": "周期较长，可能要 3~5 天时间，且可能失败重试。第一家失败就换下一家，不要在一家反复提交。"
+        },
+        {
+          "type": "faq",
+          "title": "认证需要准备什么材料？",
+          "text": "按商家要求准备：edu 邮箱、课表截图、录取通知书等；部分流程还需要美国手机号接码。"
+        },
+        {
+          "type": "faq",
+          "title": "商家让我提供 ChatGPT 的 session 怎么办？",
+          "text": "拒绝提供 session / Cookie，让商家指导你在自己账号上操作。绝不提供账号密码、支付信息、验证码和 session，全程走闲鱼平台沟通和付款。"
+        },
+        {
+          "type": "faq",
+          "title": "学生优惠什么时候领最合适？",
+          "text": "先买一个月 Plus 正常使用，不要立即领取；在到期前 1–2 天领取。注意领取截止 10 月 31 日，错过无法补领。"
+        },
+        {
+          "type": "faq",
+          "title": "免费试用状态下能做学生认证吗？",
+          "text": "不能，会封号。必须先付费开通一个月 Plus 再走认证。"
+        },
+        {
+          "type": "faq",
+          "title": "之前是代充 / 合租的号，还能用学生优惠吗？",
+          "text": "可以。等当前 Plus 快到期时用虚拟卡自己续一个月（满足已绑卡条件），再按上面的时机领取。"
+        },
+        {
+          "type": "step",
+          "title": "封号与风控",
+          "text": "按问题查看对应说明。"
+        },
+        {
+          "type": "faq",
+          "title": "一张卡可以绑多个 GPT 账号吗？",
+          "text": "不可以，红线是一卡一号：一张乐享卡只能绑定一个 ChatGPT 账号。一卡多绑是明确的风控特征，轻则扣款失败，重则账号与卡片都被封。要给第二个账号订阅，请另外开一张新卡。"
+        },
+        {
+          "type": "faq",
+          "title": "这张卡以后还能用来订阅别的 AI 吗？",
+          "text": "可以。乐享卡是国际通行的 Visa 虚拟卡，之后可以用来充值 Claude、Gemini 等其他 AI 网站的会员。同样建议一个平台固定用一张卡，保持余额充足，卡内常留 3–5 美元防冻结。"
+        },
+        {
+          "type": "faq",
+          "title": "怎么降低封号风险？",
+          "text": "全程固定同一个菲律宾节点环境、使用没有封号历史的卡、绝不在免费试用状态下做学生认证、不参与代充和资金盘、一卡一号不多绑。按教程正常流程操作的账号风险相对最低。"
+        },
+        {
+          "type": "faq",
+          "title": "账号被风控了怎么办？",
+          "text": "等待 24 小时，期间不要发起任何消费或重试扣款，之后用同一环境再试。反复换 IP 重试只会加重风控。"
+        },
+        {
+          "type": "faq",
+          "title": "和别人合租 / 拼车账号有什么风险？",
+          "text": "多人并发使用会被判定，出现降智（模型被换成低配版本），严重时封号。自己订阅 + 固定环境是最稳的。"
+        }
+      ],
+      "category": "fix",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 31,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "plus-questions",
+      "revision": 1
+    },
+    {
+      "title": "用 Antigravity Manager 将 Gemini 接入客户端",
+      "summary": "按原稿配置账号、启用本地服务，并在客户端测试连接。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "Gemini 反代 · 下载安装 Antigravity Manager",
+          "text": "把谷歌反重力（Antigravity）账号里的 Gemini / Claude 额度，反代成你自己的私人 API 中转站：Base URL + API Key 直接给各种客户端用。\n\n打开上方 GitHub 项目页，进 Releases 选择最新版本（图一）。\n\nWindows 选 .exe installer 下载安装；也可以把项目链接直接发给 Codex 让它帮你装。",
+          "tip": "同样是开源工具；安装路径尽量不要有中文，可以装在非 C 盘。"
+        },
+        {
+          "type": "related",
+          "title": "打开 AntigravityManager 项目页（GitHub）",
+          "text": "打开 AntigravityManager 项目页（GitHub）",
+          "url": "https://github.com/Draculabo/AntigravityManager"
+        },
+        {
+          "type": "step",
+          "title": "Gemini 反代 · 添加谷歌账号并授权",
+          "text": "打开软件后先把谷歌账号加进来。授权环节对网络要求高：需要干净的美区 IP 并开启 TUN（虚拟网卡）模式，否则无法授权。\n\n双击打开软件，在仪表盘点右上角「添加账号」（图一）。\n\n推荐方式一点「开始 OAuth 授权」，浏览器跳转谷歌登录页完成账号授权（图二）。\n\n页面出现 Authorization Successful 字样即登录成功。",
+          "tip": "推荐第一种 OAuth 方式，浏览器点一下就完成。\n添加账号失败或超时，基本都是网络环境不干净：换成干净的美区 IP 并开启 TUN 模式再试（群精华的美区 150 延迟 IP 亲测可用）。"
+        },
+        {
+          "type": "step",
+          "title": "Gemini 反代 · 启用账号与反代服务",
+          "text": "账号加好后，把账号配额启用，再打开 API 反代服务的开关，就能拿到属于你的 API 密钥。\n\n点「账号管理」：账号池正常显示各模型额度、没有 403 / 502 等报错即为成功（图一）。\n\n全选账号，点「启用」，开启账号反代配额。\n\n点「API 反代」—「启用服务」，显示「服务运行中」即反代已开启，页面里就是你的 API 密钥（图二）。",
+          "tip": "账号池里有 403 / 502 报错就先处理，报错办法在最后一步。\nAPI 密钥等同账号权限，妥善保管，不要泄露给他人。"
+        },
+        {
+          "type": "step",
+          "title": "Gemini 反代 · 接入客户端使用",
+          "text": "任何需要 API 密钥的软件都能接入。配置只需要三样：Base URL、API Key、模型 ID，全部在「API 反代」界面（图一）。\n\n以 Cherry Studio 为例：依次点「设置」—「模型服务」—「添加」，供应商类型选 OpenAI，名称随意（图二）。\n\nAPI 密钥填反代页面的密钥，API 地址填 http://127.0.0.1:8045/v1（端口以你页面显示为准）。\n\n点「检测」测试连通性，出现「连接成功」和密钥右侧对号即导入成功（图三）。\n\n开一轮新对话测试，能正常回复就大功告成。",
+          "tip": "以 Cherry Studio 为例，Codex、Claude Code、酒馆等方法类似。"
+        },
+        {
+          "type": "step",
+          "title": "Gemini 反代 · 常见报错处理",
+          "text": "三种最常见的问题，对着现象处理即可。\n\n添加账号失败或超时（fetch failed）：网络环境不干净，换干净美区 IP 并开启 TUN 模式（图一）。\n\n账号 403 报错要求验证：在手机上安装 Google 应用，登录需要验证的账号，用扫码方式完成验证（图二）。\n\n反代一段时间后账号被禁用：多发生于长期未登录或刚获得 PRO（尤其学生认证）的账号；先用干净美区 IP 正常使用养 2–3 天再反代，或重新去 Gemini 网页登录验证（图三）。",
+          "tip": "绝大多数报错都是网络或账号状态问题，按下面三条处理基本都能解决。"
+        }
+      ],
+      "category": "how",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "用"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 30,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "gemini-client",
+      "revision": 1
+    },
+    {
+      "title": "用 CockpitTools 添加并切换 Codex 账号",
+      "summary": "安装工具，授权自己的账号，然后切换并核对当前使用的账号。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "CockpitTools · 下载安装",
+          "text": "解决的问题：用 Codex 时 A 账号额度用完了，怎么快速切到 B 账号？CockpitTools 免去退出登录、重新授权的繁琐步骤。\n\n打开上方 GitHub 项目页，下载最新版本安装（图一）。\n\n偷懒办法：把项目链接直接发给 Codex，让它「帮我安装这个工具到指定文件夹」，装完桌面和开始菜单都有快捷方式。",
+          "tip": "开源工具，GitHub 直接下载；也可以把链接发给 Codex 让它帮你装。"
+        },
+        {
+          "type": "related",
+          "title": "打开 CockpitTools 项目页（GitHub）",
+          "text": "打开 CockpitTools 项目页（GitHub）",
+          "url": "https://github.com/jlcodes99/cockpit-tools"
+        },
+        {
+          "type": "step",
+          "title": "CockpitTools · 添加并授权账号",
+          "text": "把需要快速切换的 Codex 账号都加进账号池，每个账号完成一次 OAuth 授权即可。\n\n打开软件，左侧栏点「Codex」，点右上角「+」添加需要快速切换的账号（图一）。\n\n在弹窗中点「在浏览器中打开」，登录该账号并完成 OpenAI OAuth 授权（图二）。\n\n重复上一步，把所有要切换的账号都加进账号池。",
+          "tip": "每个账号只要授权一次，之后切换就不需要再登录。"
+        },
+        {
+          "type": "step",
+          "title": "CockpitTools · 一键切换账号",
+          "text": "日常使用只需要两个按钮：先「切换」，再「切换并启动」，工具会自动换号并重启 Codex。\n\nA 账号没额度时，点目标账号卡片下的「切换」按钮（图一）。\n\n在启动预览里点「切换并启动」，等待加载完成（图二）。\n\n程序会自动写入账号配置并重启 Codex，直接使用即可（图三）。同样的方法也适用于 Claude、Antigravity 等其他 Agent。",
+          "tip": "切换前确认目标账号还有额度，账号卡片上有用量和订阅有效期。"
+        }
+      ],
+      "category": "how",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "用"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 29,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "cockpit-switch",
+      "revision": 1
+    },
+    {
+      "title": "ChatGPT Plus 订阅流程与账户检查",
+      "summary": "从账户和已有订阅状态开始，按原稿查看支付准备、订阅流程及后续注意事项。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "你有 ChatGPT 账户吗？",
+          "text": "请按自己的账户情况选择下面的入口。",
+          "tip": "已有账户就检查订阅状态；没有账户就先确认网络环境。"
+        },
+        {
+          "type": "related",
+          "title": "已有账户，检查订阅状态",
+          "text": "已有账户，检查订阅状态",
+          "url": "/?article=plus-subscribe#part-4"
+        },
+        {
+          "type": "related",
+          "title": "没有账户，查看准备条件",
+          "text": "没有账户，查看准备条件",
+          "url": "/?article=plus-subscribe#part-8"
+        },
+        {
+          "type": "step",
+          "title": "这个账户已经订阅 Plus 吗？",
+          "text": "确认当前账户是否有有效订阅，然后打开对应入口。",
+          "tip": "没有订阅就直接进入代理询问；已订阅则继续确认订阅来源。"
+        },
+        {
+          "type": "related",
+          "title": "已经订阅，核对订阅来源",
+          "text": "已经订阅，核对订阅来源",
+          "url": "/?article=plus-subscribe#part-7"
+        },
+        {
+          "type": "related",
+          "title": "没有订阅，查看准备条件",
+          "text": "没有订阅，查看准备条件",
+          "url": "/?article=plus-subscribe#part-8"
+        },
+        {
+          "type": "step",
+          "title": "Plus 是通过哪种方式订阅的？",
+          "text": "请选择当前账户的订阅来源。\n\nApple App Store：移动端订阅\n\nGoogle Play：移动端订阅\n\n网页／银行卡：ChatGPT 网页订阅\n\n第三方代充／其他：来源需要单独核对",
+          "tip": "当前账户已有有效订阅时，本流程到这里暂停。请等待现有订阅周期结束，再决定是否继续。"
+        },
+        {
+          "type": "step",
+          "title": "你会使用网络代理吗？",
+          "text": "本向导默认你已会使用代理：自己有机场/节点，会导入订阅、选节点、开全局。这是使用门槛，不满足的话向导无法继续。\n\n会，直接检查：我已有可用代理\n\n不会，暂不满足门槛：建议先自行学习如何使用网络代理",
+          "tip": "如果还不能自行配置网络，请先完成准备，再回来继续。"
+        },
+        {
+          "type": "related",
+          "title": "已具备条件，检查网络",
+          "text": "已具备条件，检查网络",
+          "url": "/?article=plus-subscribe#part-10"
+        },
+        {
+          "type": "step",
+          "title": "检查网络是否通过",
+          "text": "使用你自己的代理保持连接，打开 IPPure，查看页面底部的检测字段。",
+          "tip": "示例重点看“IP 来源”和“IP 属性”，11%只是参考图示例。\n机场与节点请自行准备。通过条件：IP 来源显示“原生 IP”，IP 属性显示“住宅 IP”。"
+        },
+        {
+          "type": "related",
+          "title": "打开 IPPure",
+          "text": "打开 IPPure",
+          "url": "https://ippure.com/"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/aa9ca087-6bb4-469b-a82d-56331cdcd6b4.webp",
+          "title": "IPPure 检测示例：原生 IP、住宅 IP、11% 极度纯净",
+          "text": ""
+        },
+        {
+          "type": "step",
+          "title": "注册或登录 ChatGPT",
+          "text": "进入 ChatGPT 官方网站，按页面提示完成注册或登录。\n\n已有账户：点击 Log in 并登录。\n\n新账户：点击 Sign up，完成邮箱验证和安全设置。\n\n注册或登录完成后，点击下方确认。",
+          "tip": "使用自己的邮箱和官方支持的登录方式。"
+        },
+        {
+          "type": "related",
+          "title": "打开 ChatGPT 官方网站",
+          "text": "打开 ChatGPT 官方网站",
+          "url": "https://chatgpt.com/"
+        },
+        {
+          "type": "step",
+          "title": "注册 Roogoo 并完成实名",
+          "text": "开始准备付款用的虚拟卡。请通过官方注册链接注册，并以平台当前页面为准。\n\n复制官方注册链接到浏览器打开，用任意邮箱注册账户密码（图一）。\n\n进入「设置」完成实名认证：选择 Sumsub 认证（审核快），身份证或护照均可，如实填写、照片拍清楚，不要用美颜或 AI 修图（图二）。\n\n认证通过后先回首页，不要急着点「免费申请卡片」——网站还没有余额，下一步先买 U（图三）。",
+          "tip": "实名用身份证或护照都可以，如实填写，大约 10 分钟通过。\n身份证和人脸信息只提交给 Roogoo 官方平台；费用和资格以平台当前页面为准。"
+        },
+        {
+          "type": "related",
+          "title": "注册 Roogoo（官方注册链接）",
+          "text": "注册 Roogoo（官方注册链接）",
+          "url": "https://wap.roogoo.money/register"
+        },
+        {
+          "type": "step",
+          "title": "购买 18–19 USDT（约 121 元）",
+          "text": "交易所任选一家（欧易 / 币安 / Gate 都可以），跟着上方 Roogoo 官方教程操作即可，下面以币安为例。预算口径：约 16 U 付一个月 Plus，3 U 留卡内。\n\n下载所选交易所的 App，邮箱注册并完成身份证 KYC（细节跟着上方对应教程走）。\n\n在「账户安全」绑定谷歌验证器 2FA，之后每次提币都要用。\n\n进入「充值 → C2C交易」（以币安为例）：币种 USDT、法币 CNY，按实时汇率选商家，确认订单限额覆盖支付金额（图一）。\n\n用本人实名支付宝/微信付款，转账备注一律留空，等卖家放币（图二）。",
+          "tip": "三家教程选一个跟着走就行，别三家都看。\niPhone 下载交易所 App 需要海外 Apple ID；买 U 只走正规大所，私下交易容易收到黑 U、假 U 且无法追回。"
+        },
+        {
+          "type": "related",
+          "title": "欧易(OKX) 购买USDT教程",
+          "text": "欧易(OKX) 购买USDT教程",
+          "url": "https://help.roogoo.com/zh-CN/articles/11761276-通过欧易-okx-数字货币交易所购买usdt稳定币指南"
+        },
+        {
+          "type": "related",
+          "title": "币安(Binance) 购买USDT教程",
+          "text": "币安(Binance) 购买USDT教程",
+          "url": "https://help.roogoo.com/zh-CN/articles/13213729"
+        },
+        {
+          "type": "related",
+          "title": "Gate 购买USDT教程",
+          "text": "Gate 购买USDT教程",
+          "url": "https://help.roogoo.com/zh-CN/articles/15237655-通过gate数字货币交易所购买usdt稳定币指南"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/7fc52400-ecc8-41d3-a422-211d5a6202a0.webp",
+          "title": "币安 C2C 界面：买入、USDT、CNY、订单限额与购买按钮",
+          "text": "图一 · 币安 C2C：选「买入 USDT」、支付 CNY，挑订单限额覆盖支付金额的商家"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/a55412d1-0400-4230-8a76-6fc81c8df68d.webp",
+          "title": "币安购买 USDT 下单页：广告方条款、支付金额、购买按钮",
+          "text": "图二 · 下单页：填金额点「购买USDT」，按卖家二维码实名付款，备注留空"
+        },
+        {
+          "type": "step",
+          "title": "链上充值到 Roogoo（三单一致）",
+          "text": "把 USDT 从交易所提到 Roogoo 账户。这一步最容易丢钱，核心是币种、地址、网络三者一致。\n\nRoogoo「首页 → 充币收款 → 链上充币」：按平台内充币教程选择币种和网络（当前教程为 USDT + BSC），复制生成的充值地址（图一）。\n\n回到交易所「提现」：币种、地址、网络与 Roogoo 充币页显示的完全一致（当前对应 USDT + BSC，图二）。\n\n提现数量填 18–19 USDT，输入 2FA 验证码提交；链上手续费 0.01 USDT。\n\n几分钟后订单状态显示「已完成」，Roogoo 网站余额到账（图三）。",
+          "tip": "充错网络的链上资产基本找不回，提交前逐项核对。\n币种和网络以 Roogoo 平台内充币教程实时显示为准，平台有更新就跟平台走。到账前不要进行下一步；长时间未到账先核对交易 ID，再联系交易所客服。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/04668c43-d9b9-4cf4-9741-2e43f5818f6b.webp",
+          "title": "Roogoo 首页：充币收款下拉菜单中的链上充币",
+          "text": "图一 · Roogoo 首页：充币收款 → 链上充币，选币种网络后复制地址"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/d0a86b8f-109f-4ea2-8e16-6d736040ecc3.webp",
+          "title": "币安提现页与 Roogoo 链上充币页对照：USDT、BSC 网络、地址一致",
+          "text": "图二 · 币安提现（左）对 Roogoo 充币页（右）：币种 USDT、网络 BSC，两边必须一致"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/5e290722-d762-4612-92f9-03620e14e792.webp",
+          "title": "Roogoo 充值前后余额对比，到账后点击卡片进入申请界面",
+          "text": "图三 · 到账后余额变化，随后点「卡片」进入开卡申请"
+        },
+        {
+          "type": "step",
+          "title": "开通乐享卡并保存卡信息",
+          "text": "Roogoo 四款卡中只有乐享卡（美国发卡）支持 AI 订阅，其他卡付不了 GPT，不要选错。\n\nRoogoo 首页点左侧「卡片」进入申请界面（图一）。\n\n「申请卡片」页有多款卡，费率各不相同（图二）：只有美国发卡的乐享卡(Enjoy Card)支持 AI 订阅，无境卡不支持，千万别选错（图三）。\n\n点「申请卡片」，从网站余额扣 10 USDT 作为首充；审核约 10 分钟开通，卡内余额显示可能有几分钟延迟，刷新等待即可（图四）。\n\n立刻保存卡号、有效期、安全码（CVV），付款时要填。\n\n从网站余额再向卡内充值，把卡内凑到约 19 U：约 16 U 付 Plus，3 U 余量。",
+          "tip": "开卡首充 10 U 只是门槛，钱进卡内余额；目标是把卡内补到约 19 U。\n余额不足时不要尝试扣款：会产生拒付费（20 美元账单约收 0.9 美元，也有反馈十几元的情况），成功扣款的手续费很少。新卡常留 3–5 U 防冻结。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/3bcca4cc-7481-4b78-bb72-bfa1718c67e5.webp",
+          "title": "Roogoo 首页：左侧「卡片」入口",
+          "text": "图一 · Roogoo 首页：点左侧「卡片」进入申请界面"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/f9f21e1d-8a51-46b0-8e45-f1c67b6b289f.webp",
+          "title": "申请卡片页：虚拟卡-消费分类下的乐享卡(Enjoy Card)被圈出",
+          "text": "图三 · 认准「乐享卡(Enjoy Card)」（美国发卡，1% 交易费）"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/d902e19c-2df7-4829-860b-ac21f24161bb.webp",
+          "title": "乐享卡开通后界面：卡片余额待创建完成，点击刷新",
+          "text": "图四 · 开卡后：「持卡人信息创建中」属正常，点「刷新」等余额显示"
+        },
+        {
+          "type": "step",
+          "title": "官方订阅 ChatGPT Plus（菲律宾区）",
+          "text": "保持菲律宾节点稳定（全局代理 + 虚拟网卡），进入官网升级 Plus。付款前核对：页面必须显示菲律宾货币（PHP），认准 ₱1,100/月 的 Plus 档位。\n\n先用 IPPure 复查：IP 归属地菲律宾、原生住宅 IP，节点延迟稳定再进入付款（节点状态参考见图一）。\n\n认准 ₱1,100/月 的 ChatGPT Plus 档位（图二）；免费版 / Go / Pro 等其他档位都不能参加此次活动。\n\n如果界面显示的是「免费试用」，先购买 ChatGPT Go，再从 Go 升级到 Plus。\n\n特别注意：千万不要在免费试用状态下开通学生认证，会封号。\n\n付款方式选银行卡（VISA），填写乐享卡的卡号、有效期、安全码（图三）。填免税州之前，页面会显示 12% VAT、合计 ₱1,100，属正常现象。\n\n账单地址用 DeepSeek 生成：打开 deepseek.com，让它“随机生成一个美国免税州（如俄勒冈 Oregon）的真实格式地址，包含街道、城市、州、缩写和邮编”；全名填任意英文名，国家或地区选美国，粘贴进去后税额变 0%，应付约 982 PHP ≈ 105.65 元（填法见图四，免税后见图五）。\n\n一卡一号红线：这张乐享卡只能绑定当前这一个 GPT 账号，一卡多绑会触发风控甚至封号；以后给别的账号订阅，必须另开新卡。\n\n最后核对套餐、币种、税费、金额，点「订阅」完成支付；付款成功后记录会员到期日期（成功与结算样式见图六）。",
+          "tip": "菲律宾区 Plus 标价 1,100 PHP/月；填美国免税州账单地址后税额为 0，约 982 PHP ≈ 105.65 元。"
+        },
+        {
+          "type": "related",
+          "title": "打开 ChatGPT 官方网站",
+          "text": "打开 ChatGPT 官方网站",
+          "url": "https://chatgpt.com/"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/b1a74dfe-6c98-4dd2-8a1a-c4d1a073c913.webp",
+          "title": "付款前节点状态参考：菲律宾节点、全局模式、系统代理已开启",
+          "text": "图一 · 付款前节点状态参考：菲律宾节点 + 全局模式 + 系统代理开启"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/a8dbe330-809a-4afc-ae19-85e818652f5d.webp",
+          "title": "ChatGPT Plus 菲律宾定价：₱1,100/月，升级至 Plus",
+          "text": "图二 · 认准 ₱1,100/月 的 ChatGPT Plus 档位"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/99300377-6c2a-47d9-bab3-9f8b08c32514.webp",
+          "title": "付款页：选银行卡并填写卡号、有效期、安全码，右侧显示 12% VAT 合计 PHP 1,100",
+          "text": "图三 · 付款页：选「银行卡」填卡信息，未免税前含 12% VAT、合计 ₱1,100"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/dea11dee-185b-49b3-8a5a-5df070cc727d.webp",
+          "title": "账单地址填写示例：国家选美国并填写免税州地址",
+          "text": "图四 · 账单地址：国家选美国，填写美国免税州地址示例"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/0211aa43-fc4b-4464-815d-6d1a821936e7.webp",
+          "title": "填完免税州地址后：税额 0%，今日应付金额 PHP 982.14，点击订阅",
+          "text": "图五 · 免税后应付 ₱982.14 ≈ 106 元，核对无误点「订阅」"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/2b718b0c-443e-43b9-8720-27640a4e17dc.webp",
+          "title": "ChatGPT Plus 订阅结算示意（金额已作隐私处理）",
+          "text": "图六 · 订阅成功与结算示意，金额已作隐私处理"
+        },
+        {
+          "type": "step",
+          "title": "闲鱼购买 SheerID 学生认证（次月）",
+          "text": "第一个月 Plus 用完再办学生认证。在闲鱼搜索「sheerid」关键词，市场价大概 80–100 元。\n\n闲鱼搜索「sheerid」，挑标价 80–100 元的服务：不要买贵的，也不要买太便宜的。\n\n认准商家页面写「不绑卡 仅认证」的——只有这种符合你已绑卡、已有一个月 Plus 的情况。\n\n第一家审核失败就换下一家，一直换到成功为止；审核严、失败率高，需要多尝试。\n\n全程只通过闲鱼平台沟通和付款，绝不向商家提供账号密码、支付信息或验证码。",
+          "tip": "你已经绑过卡、有了一个月的 Plus，商家页面写「不绑卡 仅认证」的才符合你的情况。"
+        },
+        {
+          "type": "step",
+          "title": "学生优惠与安全红线（次月）",
+          "text": "学生优惠领取截止 10 月 31 日，错过无法补领。最后逐条确认红线，全部勾选后完成流程。\n\n我已正常使用完当前订阅周期，没有在第一个月立即领取学生优惠。\n\n我只在闲鱼平台内沟通和付款，出现纠纷走平台介入。\n\n我不接受私下转账，也不接受临时加价。\n\n我绝不向第三方提供账号密码、支付信息或验证码。",
+          "tip": "例如 9 月 1 日开通、9 月 30 日到期，就在 9 月 28–29 日到期前一两天去办，给失败重试留时间。"
+        },
+        {
+          "type": "step",
+          "title": "恭喜你成功完成了所有流程！",
+          "text": "开始使用 ChatGPT Plus 吧！",
+          "tip": "别忘了：学生优惠领取截止 10 月 31 日。"
+        }
+      ],
+      "category": "how",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "ChatGPT"
+      ],
+      "layout": "steps",
+      "related": [
+        "plus-questions",
+        "cockpit-switch",
+        "gemini-client"
+      ],
+      "status": "新发布",
+      "order": 28,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "plus-subscribe",
+      "revision": 2
+    },
+    {
+      "title": "Open WebUI 接兼容 API：用 Open WebUI 连接一个 OpenAI 兼容网关",
+      "summary": "Open WebUI 是聊天前端，不自带模型。先部署，再在管理员连接设置里添加提供商。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "部署 Open WebUI 并持久化数据",
+          "text": "Docker 是常见路径；生产环境固定版本并设置数据卷。\n\n选择部署方式\nDocker 适合快速开始；Kubernetes 与 Python 适合已有运维体系。\n\n持久化数据\n用户、对话与设置写入数据卷；请规划备份。\n\n限制暴露\n首次初始化前不要直接开放公网。",
+          "tip": "第一个注册账户通常拥有管理员权限，必须由你本人创建。"
+        },
+        {
+          "type": "step",
+          "title": "创建首个管理员并收紧注册",
+          "text": "完成管理员创建后，再决定是否允许其他用户注册。\n\n创建管理员\n使用唯一强密码。\n\n检查注册策略\n个人站点关闭公开注册。\n\n配置 HTTPS\n通过受信任反代提供访问。",
+          "tip": "人工操作：创建管理员、配置证书与域名。"
+        },
+        {
+          "type": "step",
+          "title": "在 Admin → Connections 添加提供商",
+          "text": "OpenAI 兼容服务也选择 OpenAI 类型，并填写自定义 Base URL。\n\n选择 Provider\n兼容 OpenAI 的上游选择 OpenAI。\n\n填写 Base URL\n通常为 https://你的网关/v1；以服务商文档为准。\n\n填写 API Key\n只在管理后台安全字段填写，可设置 Prefix 避免模型重名。",
+          "tip": "API Key 不要填到本网站，也不要截图公开。"
+        },
+        {
+          "type": "step",
+          "title": "让模型被正确发现与命名",
+          "text": "自动发现失败时再手动限制模型列表。\n\n自动发现\n保存连接后刷新模型选择器。\n\n处理重名\n多个提供商出现相同模型 ID 时设置 Prefix ID。\n\n确认 API Type\n根据上游能力选择 Chat Completions 或 Responses。",
+          "tip": "Docker 内的 localhost 指容器自身；跨容器应使用同一网络中的服务名。"
+        },
+        {
+          "type": "step",
+          "title": "从管理员测试扩展到普通用户",
+          "text": "分别确认聊天、流式输出、附件和权限。\n\n短对话\n选择目标模型发送非敏感测试。\n\n检查上游\n网关应显示请求和正确计费。\n\n最小权限\n普通用户只能看到允许的模型与功能。",
+          "tip": "完成标准：模型可选、请求到达正确上游、注册与权限符合预期。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://docs.openwebui.com/ecosystem/computer/ai/connect-a-model",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 25,
+      "tags": [
+        "Open WebUI 接兼容 API"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 27,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-openwebui",
+      "revision": 1
+    },
+    {
+      "title": "Claude Desktop + 三方 API：把“CPA 三方接口”当成兼容性项目来做",
+      "summary": "先确认服务商到底提供 Anthropic 兼容还是 OpenAI 兼容接口，再选择客户端。名称相似不代表可以互连。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "向服务商拿到四个明确答案",
+          "text": "缺少任何一项都先不要配置。\n\n协议类型\nAnthropic Messages、OpenAI Chat Completions 还是 Responses？\n\nBase URL\n是否需要 /v1，证书域名是否有效？\n\n模型列表\n真实模型 ID 与别名分别是什么？\n\n认证方式\nBearer Key、OAuth 或其他头部？",
+          "tip": "人工操作：向你选择的服务商核实；不要照搬博客截图。"
+        },
+        {
+          "type": "step",
+          "title": "检查服务商可信度与数据边界",
+          "text": "第三方中转可以看到提示词与响应，敏感数据不要发送。\n\n看隐私与留存\n确认是否记录内容、保留多久、能否删除。\n\n控制充值规模\n先小额测试，不预存大额余额。\n\n准备自己的优惠码\n如果你有自有推广码，在人工操作台填；默认留空。",
+          "tip": "任何优惠码都不证明服务本身可信。"
+        },
+        {
+          "type": "step",
+          "title": "按协议选择客户端或桥接器",
+          "text": "Anthropic 兼容才有机会直接接入相应客户端。\n\n有官方入口\n只使用客户端公开的自定义 Provider 功能。\n\n协议不匹配\n使用受审查的本地桥，或改用 Open WebUI。\n\n无自定义入口\n停止修改，选择支持自定义端点的工具。",
+          "tip": "不建议下载未知来源的“魔改客户端”。"
+        },
+        {
+          "type": "step",
+          "title": "创建低额度 Key 做最小测试",
+          "text": "不要一上来就放入长期主 Key。\n\n创建测试 Key\n限制模型、速率与额度。\n\n发送非敏感请求\n确认模型名、工具调用与流式输出。\n\n检查用量\n第三方控制台的用量应与测试一致。",
+          "tip": "Key 仅放在客户端安全设置。"
+        },
+        {
+          "type": "step",
+          "title": "记录可撤销点与替代路线",
+          "text": "第三方服务可能变更域名、模型和价格。\n\n记录 Key 位置\n知道从哪里撤销，不记录 Key 本身。\n\n保留余额警报\n设置低余额与异常用量提醒。\n\n准备迁移\n保存不含密钥的客户端配置说明。",
+          "tip": "完成标准：协议匹配、低额测试通过、敏感数据不经过不可信中转。"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 20,
+      "tags": [
+        "Claude Desktop + 三方 API"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 26,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-compatible",
+      "revision": 1
+    },
+    {
+      "title": "Claude Desktop + DeepSeek：先判断 Claude Desktop 是否能接 DeepSeek，再决定桥接",
+      "summary": "官方桌面客户端未必提供通用 Base URL 输入框。不要通过修改未知文件强行注入；优先使用受支持客户端或本地兼容桥。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "确认“桌面客户端”到底支持什么",
+          "text": "客户端版本变化很快，先查当前设置里是否存在自定义提供商。\n\n检查设置\n查找 Provider、Base URL、API Type 等字段。\n\n确认协议\nDeepSeek 常见为 OpenAI 兼容接口；Claude 客户端可能需要 Anthropic 协议。\n\n选择替代\n若没有自定义入口，改用 Open WebUI 或支持自定义端点的客户端。",
+          "tip": "没有官方入口就不要假装可以直接填写。"
+        },
+        {
+          "type": "step",
+          "title": "在官方平台创建独立 API Key",
+          "text": "为桌面用途创建可撤销、可限额的 Key。\n\n创建 Key\n在 DeepSeek 官方控制台完成，Key 只显示一次时立即安全保存。\n\n设置限额\n若平台支持，设置预算与告警。\n\n记录 Base URL 与模型名\n只从官方文档复制，避免使用教程里的旧值。",
+          "tip": "人工操作：登录、实名认证（如有）、充值、创建 Key。"
+        },
+        {
+          "type": "step",
+          "title": "需要时使用可信的本地协议桥",
+          "text": "桥接层只在本机监听，并负责协议转换。\n\n选择维护活跃的项目\n阅读许可证、更新记录与安全说明。\n\n本机监听\n绑定 127.0.0.1，不把 Key 放到前端或公共日志。\n\n映射模型\n把客户端模型标识明确映射到 DeepSeek 的真实模型。",
+          "tip": "未知二进制和来路不明的一键脚本风险很高。"
+        },
+        {
+          "type": "step",
+          "title": "只在支持的配置入口填写",
+          "text": "如果客户端不支持，回到“判断”选择替代客户端。\n\n填 Base URL\n使用本机桥地址或官方兼容端点。\n\n安全引用 Key\n优先系统钥匙串或环境变量。\n\n保存并重启\n完全退出客户端后重新打开。",
+          "tip": "不要修改客户端签名文件或关闭系统安全保护。"
+        },
+        {
+          "type": "step",
+          "title": "验证模型身份、用量与隐私边界",
+          "text": "能返回文本还不够，必须确认真正走的是目标渠道。\n\n查看桥接日志\n确认目标模型与 HTTP 状态，不记录正文。\n\n查看供应商用量\n控制台应出现对应请求。\n\n删除测试 Key\n如果只是试验，完成后撤销临时 Key。",
+          "tip": "完成标准：模型与计费一致、Key 可撤销、无明文日志。"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 20,
+      "tags": [
+        "Claude Desktop + DeepSeek"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 25,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-deepseek",
+      "revision": 1
+    },
+    {
+      "title": "VPS 增加 SWAP：给小内存 VPS 加一层可控的 SWAP",
+      "summary": "SWAP 能降低突发内存不足导致的进程终止，但不能替代真实内存。磁盘空间和 I/O 性能要先评估。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "查看内存、SWAP 与磁盘余量",
+          "text": "已有 SWAP 时不要重复创建。\n\n检查内存\n查看 Mem 与 Swap 当前用量。\nfree -h\nswapon --show\n\n检查磁盘\n根分区至少保留高于计划 SWAP 的可用空间。\ndf -h /\n\n决定大小\n小内存机器可先考虑 1–2GB；数据库和休眠场景另行评估。",
+          "tip": "人工操作：选择大小。不要机械套用“内存两倍”。"
+        },
+        {
+          "type": "step",
+          "title": "创建只允许 root 访问的交换文件",
+          "text": "下面以 2GB 为例，请先按你的磁盘情况调整。\n\n分配文件\n优先使用 fallocate；若文件系统不支持再查对应文档。\nsudo fallocate -l 2G /swapfile\n\n收紧权限\n交换文件必须为 600。\nsudo chmod 600 /swapfile\n\n格式化\n将文件标记为 Linux swap。\nsudo mkswap /swapfile",
+          "tip": "命令会修改系统；执行前确认路径 /swapfile 不存在。"
+        },
+        {
+          "type": "step",
+          "title": "启用并验证",
+          "text": "先临时启用，确认无错误后再配置开机挂载。\n\n启用 SWAP\n立即挂载交换文件。\nsudo swapon /swapfile\n\n检查结果\nSwap 总量应发生变化。\nfree -h\nswapon --show\n\n观察日志\n如出现 I/O 或文件系统错误，立即停下排查。",
+          "tip": "若启用失败，不要直接改 fstab。"
+        },
+        {
+          "type": "step",
+          "title": "加入 fstab 并调节倾向",
+          "text": "fstab 写错可能影响启动，先备份。\n\n备份配置\n保存修改前的 fstab。\nsudo cp /etc/fstab /etc/fstab.bak\n\n加入挂载项\n确认没有重复行后再追加。\necho '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab\n\n设置 swappiness\n通用服务可从较低值开始，按工作负载观察。\nsudo sysctl vm.swappiness=10",
+          "tip": "不要重复追加 fstab 行。"
+        },
+        {
+          "type": "step",
+          "title": "重启前后各验证一次",
+          "text": "目标是降低 OOM 风险，而不是让系统长期大量换页。\n\n重启前检查\n执行 swapon --show 并核对 fstab 只有一条。\n\n安排维护重启\n重启后确认 SWAP 自动启用。\n\n持续观察\n若 SWAP 长期高占用且延迟明显，应升级真实内存。",
+          "tip": "完成标准：重启后存在、权限正确、系统无持续 thrashing。"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 10,
+      "tags": [
+        "VPS 增加 SWAP"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 24,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-swap",
+      "revision": 1
+    },
+    {
+      "title": "New API 模型网关：部署 New API，先从单管理员、单渠道开始",
+      "summary": "它是模型聚合与分发面板。商业化之前，先把数据持久化、管理员安全和上游计费跑通。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "确定用途、数据库与域名",
+          "text": "个人聚合和对外售卖的安全、合规、计费要求完全不同。\n\n确定部署目的\n个人使用先关闭公开注册；对外服务需要额外审查条款与支付合规。\n\n选择数据层\n测试可用内置数据；长期运行建议按官方文档配置受支持的数据库。\n\n准备域名\n网关域名与管理后台使用 HTTPS。",
+          "tip": "不要默认开启注册、支付或公开售卖。"
+        },
+        {
+          "type": "step",
+          "title": "用 Docker 持久化启动服务",
+          "text": "镜像版本、环境变量和卷路径以官方当前安装文档为准。\n\n固定镜像版本\n生产环境避免永久使用 latest。\n\n挂载数据卷\n确认容器重建后用户、渠道和令牌仍存在。\n\n只开放必要端口\n应用端口优先绑定本机，再由反向代理对外提供 HTTPS。",
+          "tip": "初始管理员密码必须首次登录立即修改。"
+        },
+        {
+          "type": "step",
+          "title": "先收紧管理员与注册策略",
+          "text": "管理后台暴露在公网前，先完成基础硬化。\n\n修改管理员凭据\n使用唯一强密码；若支持二次验证则开启。\n\n关闭公开注册\n除非你真的需要并已配置验证与风控。\n\n设置可信代理\n反代转发真实 IP，同时阻止客户端伪造相关头。",
+          "tip": "人工操作：创建管理员、配置域名证书、决定是否开放注册。"
+        },
+        {
+          "type": "step",
+          "title": "添加一个上游渠道并做模型映射",
+          "text": "一次只接一个供应商，成功后再扩展。\n\n创建上游 Key\n在供应商官方控制台创建最小权限 Key。\n\n填写渠道\n在 New API 的安全设置中录入 Base URL、Key 和模型。\n\n模型映射\n客户端模型名与上游真实模型必须一一核对。",
+          "tip": "API Key 只填到 New API 后台，不要填进本向导。"
+        },
+        {
+          "type": "step",
+          "title": "用专用令牌完成端到端验收",
+          "text": "管理员 Key 与客户端 Key 分离。\n\n创建测试令牌\n设置很小的额度和速率限制。\n\n调用 models 与 chat\n确认模型列表、计费和错误码。\n\n备份与更新\n验证备份可恢复，再制定镜像更新流程。",
+          "tip": "完成标准：单渠道可用、额度可控、数据可恢复、管理员安全。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://github.com/ai-lu-k/new-api",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 45,
+      "tags": [
+        "New API 模型网关"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 23,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-newapi",
+      "revision": 1
+    },
+    {
+      "title": "Codex 接自建中转：把 Codex 客户端连接到自建兼容网关",
+      "summary": "前提是你的客户端版本支持自定义提供商或 Base URL，且网关明确实现所需 API。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "确认客户端与网关的协议交集",
+          "text": "不要只看到“兼容 OpenAI”就默认所有接口都兼容。\n\n确认 Codex 版本\n查看当前版本支持的配置字段和 API 类型。\n\n确认网关能力\n网关需要公开模型列表，并实现客户端实际调用的端点。\n\n准备独立 Key\n为 Codex 创建专用网关 Key，便于撤销与限额。",
+          "tip": "人工操作：在网关后台创建 Key；不要在本页填写。"
+        },
+        {
+          "type": "step",
+          "title": "确定唯一的 Base URL",
+          "text": "公网使用 HTTPS；末尾是否需要 /v1 以网关文档为准。\n\n本机网关\n使用回环地址，避免无意暴露。\n\n远程网关\n使用受信任证书的 HTTPS 域名。\n\n连通性测试\n先用 /models 或健康检查确认网络与证书。",
+          "tip": "不要关闭 TLS 验证来掩盖证书错误。"
+        },
+        {
+          "type": "step",
+          "title": "写入客户端提供商配置",
+          "text": "字段名以 Codex 当前版本文档为准，不复制旧版配置。\n\n设置 Base URL\n只改到你的网关地址。\n\n引用 Key\n优先环境变量或系统安全存储，不把 Key 提交到仓库。\n\n设置模型 ID\n使用网关实际返回的模型名。",
+          "tip": "密钥放环境变量；配置文件只能写变量名或安全引用。"
+        },
+        {
+          "type": "step",
+          "title": "从短请求开始测试",
+          "text": "先测试文本请求，再逐步尝试工具调用和长上下文。\n\n最小文本请求\n确认能返回内容和正确模型。\n\n工具调用\n若任务依赖工具，单独测试 function/tool calling。\n\n异常路径\n用不存在的模型测试错误是否清晰，而不是静默回退。",
+          "tip": "记录 HTTP 状态码与网关日志中的请求 ID，排障时不要贴 Key。"
+        },
+        {
+          "type": "step",
+          "title": "加限额、监控与撤销能力",
+          "text": "自建网关的风险边界由你负责。\n\n限制 Key 权限\n按模型、速率或额度限制客户端 Key。\n\n保留最少日志\n避免记录完整提示词与 Authorization 头。\n\n准备回退\n保留官方直连配置，网关异常时可以切回。",
+          "tip": "完成标准：连接稳定、Key 可撤销、日志不含敏感信息。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://github.com/codeoneveryday-labs/cmdspace/blob/HEAD/docs/research/2026-09-02-router-for-me-cliproxyapi.md",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 20,
+      "tags": [
+        "Codex 接自建中转"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 22,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-codex",
+      "revision": 1
+    },
+    {
+      "title": "Poste.io 自建邮局：用 Docker 搭一套可验证的域名邮箱",
+      "summary": "邮件系统比普通网站更依赖网络信誉与 DNS。先确认 25 端口和 PTR，再部署容器。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "先查 25 端口、固定 IP 与 PTR",
+          "text": "这三项任何一项不满足，发信信誉都会受影响。\n\n确认固定公网 IP\n动态 IP 或共享 NAT 不适合自建邮件服务器。\n\n确认 25 端口\n向 VPS 服务商确认出站 25 端口未封锁。\n\n确认 PTR 权限\n反向解析通常只能由 VPS 服务商设置为 mail.你的域名。",
+          "tip": "人工操作：向服务商申请 PTR、确认端口政策、购买 VPS。"
+        },
+        {
+          "type": "step",
+          "title": "先规划邮件域名与验证记录",
+          "text": "建议用 mail.example.com 作为主机名，根域设置 MX 指向它。\n\nA 记录\nmail 子域指向服务器 IP，保持仅 DNS。\n\nMX 记录\n根域 MX 指向 mail 子域，不要直接填 IP。\n\nSPF / DKIM / DMARC\nSPF 声明允许发信源；DKIM 公钥由 Poste.io 生成；DMARC 从观察策略开始。",
+          "tip": "Cloudflare 的橙色云不代理 SMTP/IMAP；邮件主机名必须灰云。"
+        },
+        {
+          "type": "step",
+          "title": "部署 Poste.io 容器并挂载数据",
+          "text": "主机名、时区、数据目录和端口必须在启动前确定。\n\n释放端口\n确认 25、80、443、465、587、993 等未被其他服务占用。\n\n建立数据卷\n邮件与配置需要持久化目录，并纳入备份。\n\n启动容器\n使用官方当前镜像与文档，避免复制多年以前的版本参数。",
+          "tip": "邮件数据是高价值资产；先规划备份，再创建真实邮箱。"
+        },
+        {
+          "type": "step",
+          "title": "在管理界面完成域与证书设置",
+          "text": "管理员密码、邮箱账户与 DKIM 私钥都只能在你的服务中创建。\n\n创建管理员\n使用唯一强密码并启用可用的二次验证。\n\n添加域与邮箱\n先创建一个测试邮箱，再逐步增加账户。\n\n签发证书与 DKIM\n确认证书覆盖邮件主机名，把控制台生成的 DKIM TXT 写回 DNS。",
+          "tip": "不要把管理员密码或 DKIM 私钥粘贴到教程页面。"
+        },
+        {
+          "type": "step",
+          "title": "收、发、信誉三条线分别验收",
+          "text": "能打开 Webmail 不等于外部邮件可以稳定收发。\n\n外部收信\n从外部邮箱发到自建邮箱，确认 MX 与入站端口。\n\n外部发信\n发到主流邮箱，检查是否退信或进入垃圾箱。\n\n检查记录\n验证 PTR、SPF、DKIM、DMARC 对齐，并观察日志。",
+          "tip": "完成标准：双向收发、TLS 正常、验证记录通过、无开放中继。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://github.com/andrisetiaji/docs-implementation-poste-io-private-server/blob/HEAD/README.md",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 60,
+      "tags": [
+        "Poste.io 自建邮局"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 21,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-poste",
+      "revision": 1
+    },
+    {
+      "title": "Muse 邀请奖励：在 48 小时窗口内完成 Muse 邀请兑换",
+      "summary": "这是唯一预置的邀请码路线。加入后进入“设置”兑换 H5IK5G，双方分别获得 10 亿 Muse 词元。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "从指定加入页进入 Muse",
+          "text": "先打开加入页面，使用你自己的账户继续。\n\n打开加入页\n点击本路线的参考入口或人工操作台里的加入按钮。\n\n创建或登录账户\n邮箱验证、账户登录必须由你本人完成。\n\n记录加入时间\n邀请码需要在加入后的 48 小时内兑现。",
+          "tip": "不要向任何人发送登录验证码或密码。"
+        },
+        {
+          "type": "step",
+          "title": "进入 Muse 的“设置”",
+          "text": "完成加入后，从账户界面打开设置。\n\n确认当前账户\n确保是你刚刚加入、且要领取词元的账户。\n\n打开设置\n寻找邀请码、兑换或类似入口；页面文字可能随版本变化。\n\n检查时间窗口\n若已超过 48 小时，不要假装兑换成功。",
+          "tip": "人工操作：登录、邮箱验证、进入设置。"
+        },
+        {
+          "type": "step",
+          "title": "输入 H5IK5G 并确认",
+          "text": "这是用户指定的 Muse 邀请码，不使用博客原文里的码。\n\n复制邀请码\n在人工操作台点击“复制邀请码”，或手动输入 H5IK5G。\n\n粘贴并核对\n确认字符为 H5IK5G，前后没有空格。\n\n提交兑换\n阅读页面上的实时奖励说明，再确认兑换。",
+          "tip": "唯一固定邀请码：H5IK5G。其他活动码均保持待填入。"
+        },
+        {
+          "type": "step",
+          "title": "确认兑换结果与词元到账",
+          "text": "以 Muse 页面显示的账户余额和记录为准。\n\n查看成功提示\n保存成功状态，但不要公开账户信息。\n\n检查词元余额\n双方预期各得 10 亿 Muse 词元；若规则变化，以页面实时说明为准。\n\n异常处理\n失败时截图错误提示并联系官方支持，不要反复提交。",
+          "tip": "网页活动规则可能变化；实际资格与到账结果以 Muse 页面为准。"
+        },
+        {
+          "type": "step",
+          "title": "复制完整邀请文案",
+          "text": "人工操作台已放入指定文案和加入链接。\n\n复制整段文案\n使用按钮复制，不用重新拼写邀请码。\n\n选择发送对象\n只分享给愿意了解 Muse 的人。\n\n提醒 48 小时\n把关键时间窗口说清楚。",
+          "tip": "本页面不会自动发送消息；分享动作由你决定并亲自完成。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://muse.ai/join",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 3,
+      "tags": [
+        "Muse 邀请奖励"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 20,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-muse",
+      "revision": 1
+    },
+    {
+      "title": "Cloudflare 加速 Halo：让 Halo 站点经过 Cloudflare 安全分发",
+      "summary": "适合已有域名与可访问 Halo 站点的人。核心是 DNS、回源 HTTPS、缓存边界和真实访客 IP。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "准备域名、源站和回源证书",
+          "text": "先确认不经过 Cloudflare 时，源站就能稳定访问。\n\n检查源站\nHalo 与反向代理均正常，后台登录、上传和 API 请求没有 5xx。\n\n确定域名\n选定主域名或子域名，并记录源站公网 IP。\n\n准备优惠码\n如果要新购域名，请在人工操作台填你自己的优惠码；默认不带任何第三方码。",
+          "tip": "人工操作：购买域名、登录 DNS 服务商、修改解析。"
+        },
+        {
+          "type": "step",
+          "title": "把域名托管到 Cloudflare",
+          "text": "添加站点后按提示把权威 DNS 服务器改为 Cloudflare 分配的地址。\n\n添加站点\n在 Cloudflare 中输入域名并导入现有解析记录。\n\n修改 NS\n回到域名注册商完成 Nameserver 替换。\n\n等待激活\n状态变为 Active 后再继续，避免同时改两套 DNS。",
+          "tip": "只复制 Cloudflare 控制台显示的 NS 值，不要照搬别人截图。"
+        },
+        {
+          "type": "step",
+          "title": "创建指向 Halo 源站的记录",
+          "text": "网站流量可以开启代理；邮件相关记录必须保持仅 DNS。\n\n添加 A/AAAA\n将站点主机名指向源站 IP，核对是否需要开启橙色云。\n\n设置 SSL 模式\n源站有有效证书时使用 Full (strict)，不要用 Flexible 绕开证书问题。\n\n保留回源访问\n防火墙允许 Cloudflare 回源；如限制 IP，使用官方最新网段。",
+          "tip": "邮件 MX、mail 主机名和验证记录不要开启 HTTP 代理。"
+        },
+        {
+          "type": "step",
+          "title": "缓存静态资源，绕过后台与 API",
+          "text": "Halo 的后台、登录、预览与动态 API 不应被页面缓存。\n\n默认缓存\n优先使用 Cloudflare 默认策略，确认无误后再加 Cache Rule。\n\n排除动态路径\n按你的 Halo 版本识别后台与 API 路径，设置 Bypass。\n\n真实 IP\n在反代中信任 Cloudflare 头部，并限制只有可信代理可改写客户端 IP。",
+          "tip": "不要为了“秒开”开启 Cache Everything 后忘记排除后台。"
+        },
+        {
+          "type": "step",
+          "title": "分别测试访客端与后台端",
+          "text": "缓存命中不是唯一目标，登录和内容更新也必须正常。\n\n访客测试\n无痕窗口打开首页与文章，检查 HTTPS、图片和字体。\n\n后台测试\n登录、保存草稿、上传小图并退出，确认无循环跳转。\n\n清缓存测试\n发布更新后执行单 URL 清理，确认新内容能正确出现。",
+          "tip": "完成标准：前台稳定、后台可写、证书链完整、动态页面未被误缓存。"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 30,
+      "tags": [
+        "Cloudflare 加速 Halo"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 19,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-halo",
+      "revision": 1
+    },
+    {
+      "title": "CLIProxyAPI 聚合：把多家订阅收进一个兼容端点",
+      "summary": "适合已经有 Codex、Claude 或 Gemini 等合法账户，希望在本机统一切换模型的人。先只开放本机访问，再考虑远程部署。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "先确认它是不是你的解法",
+          "text": "CLIProxyAPI 是协议转换与账户路由层，不提供模型额度，也不会替你创建订阅。\n\n确认账户来源\n准备你本人可用且条款允许的订阅或 API 账户；不要购买来源不明的共享凭据。\n\n选择运行位置\n个人使用优先本机；放到 VPS 时必须加 API Key、限制管理接口并启用 HTTPS。\n\n确定客户端\nCodex、OpenCode 或其他客户端需要支持自定义 OpenAI 兼容 Base URL。",
+          "tip": "先画清数据流：客户端 → 本地网关 → 官方模型服务。任何一段无法自定义，就不要硬接。"
+        },
+        {
+          "type": "step",
+          "title": "安装并先在本机启动",
+          "text": "先让服务只监听回环地址，确认可用后再配置守护进程。\n\nmacOS 安装\n使用 Homebrew 安装并启动服务。\nbrew install cliproxyapi\nbrew services start cliproxyapi\n\nLinux / Docker\n按项目的当前安装文档选择一种方式，不要同时混用二进制与容器部署。\n\n记录配置位置\nHomebrew 与 Linux/Docker 的配置目录不同；修改前先做一份带日期的备份。",
+          "tip": "不要把登录产生的 OAuth 文件提交到 Git 仓库，也不要复制给别人。"
+        },
+        {
+          "type": "step",
+          "title": "由你亲自完成 OAuth 登录",
+          "text": "授权页涉及你的模型账户，必须由账户持有人在官方页面完成。\n\n执行登录子命令\n根据目标服务选择 Codex、Claude 或 Gemini 登录方式。终端应给出官方授权地址。\n\n核对回调\n远程服务器通常需要 SSH 隧道或设备码流程；不要把回调端口直接暴露到公网。\n\n检查文件权限\n认证目录仅允许当前用户读取，服务日志不应输出 token。",
+          "tip": "人工操作：浏览器登录、二次验证、授权确认。页面不会替你保存任何凭据。"
+        },
+        {
+          "type": "step",
+          "title": "把客户端指向兼容端点",
+          "text": "Base URL 通常以 /v1 结尾；API Key 使用你为网关单独生成的值。\n\n设置 Base URL\n本机默认示例可按文档核对为 http://127.0.0.1:8317/v1。\n\n配置网关密钥\n为客户端创建独立 Key，便于撤销；不要复用上游账户密码。\n\n选择模型\n先从 /v1/models 或客户端模型列表确认实际 ID，再保存配置。",
+          "tip": "密钥只填到客户端安全设置，不要粘贴到本网站。"
+        },
+        {
+          "type": "step",
+          "title": "用最小请求完成验收",
+          "text": "先验证连通性，再验证模型切换和故障回退。\n\n列出模型\n确认返回 200 且模型列表符合已授权账户。\n\n发一个短请求\n检查响应模型、耗时和错误日志，不要一开始就跑长任务。\n\n收紧暴露面\n公网部署应启用 HTTPS、防火墙、强 Key；管理接口保持关闭或仅限内网。",
+          "tip": "完成标准：客户端能调用、日志无明文凭据、服务重启后仍可用。"
+        },
+        {
+          "type": "related",
+          "title": "原稿参考资料",
+          "url": "https://github.com/codeoneveryday-labs/cmdspace/blob/HEAD/docs/research/2026-09-02-router-for-me-cliproxyapi.md",
+          "text": "查看来源"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 25,
+      "tags": [
+        "CLIProxyAPI 聚合"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 18,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "guide-cli",
+      "revision": 1
+    },
+    {
+      "title": "美区 Google 账号注册实操笔记",
+      "summary": "按原稿整理手机端准备、注册步骤及常见问题。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": "无论是使用海外流媒体、体验最新 AI 工具，还是绑定美区 Google Play，一个纯净的美区 Google 账号（Gmail）都是不可或缺的基础工具。\n但在国内注册谷歌账号时，90% 的人都会卡在最后一步——“此电话号码无法用于进行验证”。\n本文整理了一套目前成功率最高、无需购买海外虚拟号的实测注册方案。"
+        },
+        {
+          "type": "step",
+          "title": "一、注册前的 3 项准备",
+          "text": "1. 稳定的美国网络环境：节点务必选择美国（US），且全程开启全局模式，中途切勿切换节点。\n2. 推荐使用手机端原生 App（成功率远高于 PC 网页）：\n· iOS 用户：系统自带的「邮件」App 或 App Store 下载的官方「Gmail」App。\n· 安卓用户：官方「Gmail」App 或已安装 Google Play 框架的手机。\n3. 一个国内手机号（+86）：未过度频繁注册过谷歌的大陆手机号即可（若多次尝试被拒，可准备备用号）。"
+        },
+        {
+          "type": "step",
+          "title": "二、核心实操步骤（以手机端 Gmail 为例）",
+          "text": "PC 端网页由于浏览器指纹与语言缓存问题，风控极严。强烈建议通过手机端 Gmail App 注册，走原生通道能大幅降低风控拦截。"
+        },
+        {
+          "type": "step",
+          "title": "第一步：设置干净的环境",
+          "text": "1. 打开加速工具，切换至美国节点，确认 IP 归属地为美国且未泄漏。\n2. 建议将手机系统语言临时调整为English（英语）（能有效减少触发中文地区风控的概率）。"
+        },
+        {
+          "type": "step",
+          "title": "第二步：发起账号注册",
+          "text": "1. 打开 Gmail App，点击右上角头像 ➔ 选择 「添加其他账号」（Add another account） ➔ 选择 Google。\n2. 在登录界面左下角点击 「创建账号」（Create account） ➔ 选择 「个人用途」（For my personal use）。"
+        },
+        {
+          "type": "step",
+          "title": "第三步：填写基础资料",
+          "text": "1. 姓名：输入英文或拼音均可。\n2. 生日与性别：年份务必确保大于 18 周岁（建议填 20 岁以上，避免触发未成年人保护验证机制）。\n3. 选择邮箱地址：从系统推荐中选择，或自定义你的 Gmail 用户名并设置高强度密码。"
+        },
+        {
+          "type": "step",
+          "title": "第四步：手机号验证（关键避坑）",
+          "text": "进入验证手机号（Verify phone number）界面：\n1. 国旗图标手动切换为 中国（+86）。\n2. 输入你的大陆手机号。\n3. 接收并填入 6 位数短信验证码。\n4. 验证通过后，系统会询问是否添加电话号码至日常账号服务，建议点击「跳过」（Skip），减少绑定强关联。\n如果提示“此号码无法用于验证”怎么办？\n· 方案 A（修改浏览器语言法）：如果是电脑端操作，进入 Chrome 设置 ➔ 语言 ➔ 添加「英语（美国）」并置顶为首选语言，删除中文，清理 Cookie 后无痕模式重试。\n· 方案 B（iOS 自带邮件法）：iPhone 打开「设置」➔「邮件」➔「账户」➔「添加账户」➔「Google」，在此入口直接点击“创建账号”，该通道走的是 iOS 内部协议，验证要求最为宽松。"
+        },
+        {
+          "type": "step",
+          "title": "三、确认与固定为“美区”账号",
+          "text": "注册成功仅代表拥有了账号，要确保其在 Google Play / YouTube 等生态内属于美区，需完成以下确认：\n1. 检查账号地区\n· 打开浏览器无痕窗口，登录 Google 账号个人资料。"
+        },
+        {
+          "type": "related",
+          "url": "https://myaccount.google.com/",
+          "title": "Google 账号个人资料",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "text",
+          "text": "· 进入 Google Play 商店官网，拉到页面最底部，确认地区标签显示为 United States。"
+        },
+        {
+          "type": "related",
+          "url": "https://play.google.com/",
+          "title": "Google Play 商店官网",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "text",
+          "text": "2. 绑定美区付款方式（可选）"
+        },
+        {
+          "type": "text",
+          "text": "· 首次购买美区付费 App 或订阅服务时，系统会要求填写账单地址。"
+        },
+        {
+          "type": "text",
+          "text": "· 地址可使用免税州（如俄勒冈 Oregon、特拉华 Delaware）的真实商业地址/邮编（Zip Code），防止后续产生额外税费。"
+        },
+        {
+          "type": "step",
+          "title": "四、防封与日常使用建议",
+          "text": "· 避免频繁跳节点：刚注册的前两周为风控敏感期，尽量在固定的美国节点登录，切忌几分钟内从美国换到日本、新加坡等跨洲切换。\n· 立即配置两步验证（2FA）\n· 进入「安全性」（Security）设置。\n· 添加辅助邮箱（推荐 Outlook 或 iCloud 邮箱）。\n· 开启 两步验证，并建议绑定 Google Authenticator 等身份验证器，避免后续因国内短信拦截导致无法登录。\n存档说明：本页面由原始文本整理排版而成，内容与措辞保持原文，未作增删或补充说明。仅用于本地个人资料留存。"
+        }
+      ],
+      "category": "how",
+      "device": "手机",
+      "minutes": 8,
+      "tags": [
+        "美区"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 17,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "google-us-notes",
+      "revision": 1
+    },
+    {
+      "title": "YouTube 视频素材下载与整理",
+      "summary": "按工具准备、链接操作及常见问题整理原稿中的素材下载流程。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": "在日常内容创作和素材收集过程中，经常需要引用或参考 YouTube 上的精彩视频。今天为大家带来一期干货满满的速成教程，教大家如何利用开源工具高效、稳定地实现油管视频的本地下载。"
+        },
+        {
+          "type": "step",
+          "title": "一、 核心工具与环境准备",
+          "text": "为了摆脱繁琐复杂的下载配置，我们推荐使用开源轻量级工具 ytDownloader。\n开源项目地址：https://github.com/aandrew-me/ytDownloader"
+        },
+        {
+          "type": "related",
+          "url": "https://github.com/aandrew-me/ytDownloader",
+          "title": "https://github.com/aandrew-me/ytDownloader",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "text",
+          "text": "安装说明：请直接前往上述 GitHub 仓库，参考项目主页提供的详细视频文档进行环境配置与安装。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/6b2511c9-3b9c-4432-a5d6-3740470ca3c5.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "二、 三步上手实操流程",
+          "text": "整个工具的设计极其精简，核心操作只需三步：\n1. 启动程序：完成安装后，在本地打开 ytDownloader 应用程序。\n2. 复制链接：在浏览器中打开 YouTube，找到你想要获取的视频，复制其分享链接。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/6535ce78-bbe6-4237-95b5-f11673933be3.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "text",
+          "text": "3. 粘贴下载：将复制好的油管视频链接粘贴到软件指定输入框中，即可一键触发并完成视频下载。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/c42cbe56-93b8-4b57-8881-dc7058a38a3f.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "三、 常见问题与效率小贴士",
+          "text": "网络与环境：由于平台特性，请确保在运行及下载时处于合规的网络连接环境中，以便工具能够稳定抓取视频源。\n格式与清晰度：建议根据项目需求，在工具设置中提前确认输出的分辨率和格式，确保下载到符合剪辑要求的视频素材。"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "油管"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 16,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "youtube-material",
+      "revision": 1
+    },
+    {
+      "title": "节点溯源：读懂 IP、ASN 和上游网络",
+      "summary": "跟着示例查看 IP 属性、服务商字段与网络归属。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "IPLark - 查看本机IP地址 - IP查询是一个节点溯源网站使用他可以查询你当前节点的所有信息",
+          "text": "在ip情报这里可以查看是不是僵尸网络"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/c1f464be-0d56-44c5-878c-14309ffd4e84.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/fed50b37-fca7-4f75-a218-f64feb29cc9e.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "scamalytics.com查看IP纯净性",
+          "text": "Whoer.net看有没有被拉入黑名单"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/0cf16896-defe-4c70-9313-92f8428b299f.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/69dc7a47-a3d4-4ccb-b78c-8b8068cfad9b.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "Type查看节点类型",
+          "text": "Isp住房节点—最好的\nbusiness是商用节点（容易被封）\nHosting机房节点\n如何找到上游供应商\n\"domain\": \"cht.com.tw\",\n找到域名cht.com.tw\n这就是你的最上游供应商"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/8b4eb3a8-402a-4cbd-b8af-006a52e7b053.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ad4889c6-6bcc-4aed-adc5-7e1624dbeb52.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/28ffc20a-95e0-4cc9-af38-19f51c251a72.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/fc42de84-0ae6-408b-a24f-7a82ecfab281.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "如何查看是不是二手节点，即下游供应商",
+          "text": "Org: 某公司 查看你的org之后显示的，将这个直接在搜索引擎中查找，能被找到对应的卖家可以确定为下游卖家"
+        },
+        {
+          "type": "step",
+          "title": "在开发者与企业的IP数据智能 |IPinfo中可以查看ASN编号和对应供应商",
+          "text": "换一个新的来试试\n这个居然亚马逊有1亿多个ip\n查看他的域名\n进去主要网站是亚马逊，一般是是vpn供应商的网站"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/cfcabe2c-2bc2-4f70-91b4-6eacc6fd9fcc.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ab7e2648-a98d-4baa-9ed8-ede66aa69615.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ed11d2fe-f8eb-49b6-ac84-20314caefb57.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/0f733230-bd7a-4608-95af-7416dd397981.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ed98da0e-c290-46ad-9bb7-ea53770193aa.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "\"privacy\"下的\"service\": \"",
+          "text": "可以查看vpn的供应商，因为这个是亚马逊，不是vpn供应商，如果是供应商会被识别出来\n这些来源基本上五花八门，自己有空的话可以自己找，想对你购入的机场进行溯源，可以查看他的ip地区信息，一般自搭加整合其它大厂的"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "机场"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 15,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "node-origin",
+      "revision": 1
+    },
+    {
+      "title": "ChatGPT 与 Codex 常见报错排查",
+      "summary": "按报错现象查找原因，对照原稿检查网络、登录状态和客户端设置。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ff76c97e-de1f-4bdd-a29f-2c30e1e21850.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "text",
+          "text": "在使用 ChatGPT 桌面端、网页版及 Codex 过程中，常会遇到网络中断、授权失效或环境风控等问题。以下是针对各类常见报错的排查与解决方法。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/39dc993a-5892-42a6-9a93-607b4f2ae59b.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "gptwork 无法发送消息（网页版正常，桌面端仅工作模式无法发送）",
+          "text": "原因排查： 代理网络质量不佳，导致桌面端长连接或特定请求受阻。\n解决方法： 建议开启代理软件的虚拟网卡（TUN 模式），或切换至更稳定的节点。重启桌面端，检查代理或网络设置，并尝试切换网络。如果只在特定网络下出现，可重点检查该网络是否影响了长连接。"
+        },
+        {
+          "type": "step",
+          "title": "FrameArrived timed out，无法主动截图（极少数）",
+          "text": "原因排查： 属于客户端功能的截图兼容性 Bug，GitHub 相关讨论中也有用户遇到过。\n解决方法： 可尝试创建独立的哈希校验配置文件来规避该问题。"
+        },
+        {
+          "type": "step",
+          "title": "stream disconnected before completion / error sending request for url",
+          "text": "原因排查： 在流式响应尚未接收到最终的 response.completed 事件时，网络连接提前断开，导致客户端无法继续解析。这通常由本地代理配置、WebSocket/HTTPS 传输中断或网络不稳定引起。\n解决方法： 检查代理软件状态，开启 TUN 模式或直接更换更稳定的梯子节点。"
+        },
+        {
+          "type": "step",
+          "title": "提示 unexpected status 401 Unauthorized",
+          "text": "原因排查： 此前在使用 Codex 时配置了中转站，或是接入了其他第三方大模型。\n解决方法： 切换回 Codex 原生的 GPT 模型即可恢复正常。"
+        },
+        {
+          "type": "step",
+          "title": "Codex 如何设置成中文？",
+          "text": "单次对话：直接发送中文提示词即可。\n全局默认：需设置全局 AGENTS.md 文件。\n界面语言：在设置的 Language 界面中进行修改。"
+        },
+        {
+          "type": "step",
+          "title": "GPT 限流风控（Selected model is at capacity）",
+          "text": "解决方法： 保持时区一致，切勿频繁切换登录环境，并注意账户安全，建议绑定身份验证应用。"
+        },
+        {
+          "type": "step",
+          "title": "Codex 重连 5 次怎么办？",
+          "text": "原因排查： 多为主机网络环境的梯子质量问题或本地端口冲突引起。\n解决方法： 优化网络或排查端口占用。"
+        }
+      ],
+      "category": "fix",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "ChatGPT"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 14,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "codex-errors",
+      "revision": 1
+    },
+    {
+      "title": "用六种 AI 工具协作完成一篇内容",
+      "summary": "从选题、搜索、写作到图片和声音，按任务给工具分工。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/c8b44614-7fc0-43e1-9b06-596de8ffdcfb.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "text",
+          "text": "我以前用 AI，常常是想到什么就打开一个工具试一试。写文章用它，做图用它，做视频还用它。结果不是反复修改，就是在几个工具之间重新解释需求。"
+        },
+        {
+          "type": "text",
+          "text": "后来我换了个思路：把 AI 工具当成一个协作的人，每个工具负责自己擅长的部位和动作。任务分清楚，成本和时间才容易控制。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/e4c816f6-ae8d-4575-b62f-1a5dd9193754.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "先让“大脑”想清楚",
+          "text": "我用 GPT 负责定方向：确定选题、列大纲、写脚本，以及构思和生成图片。开始时，我会先说清楚读者是谁、要解决什么问题、最终交付文章还是视频。方向明确后，再进入制作。\nDeepSeek 是辅助思考的搭档。我会让它拆解步骤、补充备选方案，或者检查大纲有没有遗漏。它不用重复完成 GPT 的所有工作，只在需要第二种思路时出场。"
+        },
+        {
+          "type": "step",
+          "title": "再让“眼睛”和“双手”工作",
+          "text": "需要搜索资料和打磨文字时，我交给 Gemini。搜索到的信息仍要回到原始来源核对，尤其是价格、政策和产品功能这类会变化的内容。核对之后，再把材料整理成适合读者阅读的文案。\n需要基础代码或页面时，我用 WorkBuddy 动手制作。这样，大纲、文字和页面各有负责人，不必让一个工具从头做到尾。"
+        },
+        {
+          "type": "step",
+          "title": "最后补齐声音和画面",
+          "text": "豆包负责一些具体的素材任务，例如调整商品图、生成配音和短视频片段。需要较完整的视频时，再由本地 H3 承担主要生成工作。\n整个过程像人体协作：大脑决定方向，眼睛收集信息，双手完成制作，声音和画面让内容表达出来。比喻的重点不是工具有多像人，而是每一步都知道该由谁来做。"
+        },
+        {
+          "type": "step",
+          "title": "一篇内容，我会这样跑完",
+          "text": "比如要做一篇带视频的产品介绍，我通常按这个顺序：\n1. 用 GPT 明确受众、核心观点、大纲和视频脚本。\n2. 用 DeepSeek 检查结构，找出没讲清楚的地方。\n3. 用 Gemini 搜集并核对资料，完成文章初稿。\n4. 用 WorkBuddy 制作需要的展示页面。\n5. 用豆包调整商品素材，补配音或短片段。\n6. 用本地 H3 生成主要视频，最后由我统一检查事实、画面和表达。\n这套方法的“低成本”，来自按任务选择工具、用完即停。我个人会结合已有会员、代金券、免费额度和本地生成能力安排工作；这些额度和价格可能变化，不适合作为每个人都能照搬的固定预算。\n工具可以帮我提速，但最终是否准确、是否好懂、是否值得发布，还是由我来判断。把分工理顺之后，AI 才真正从一堆零散工具，变成一套能持续使用的工作流程。"
+        }
+      ],
+      "category": "tools",
+      "device": "通用",
+      "minutes": 8,
+      "tags": [
+        "低成本"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 13,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "ai-content-team",
+      "revision": 1
+    },
+    {
+      "title": "中银香港开户：材料、手机申请与分行办理",
+      "summary": "整理赴港开户前的材料、办理渠道、收卡安排与同名汇款注意事项。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": "去香港开一个银行账户，真正容易耽误行程的，往往不是操作步骤，而是临到现场才发现材料没带齐、选错办理方式，或者把“免手续费”理解成所有转账都免费。看完这支中银香港开户视频，我把能直接用的流程整理出来，并对照银行现行说明核了一遍。"
+        },
+        {
+          "type": "step",
+          "title": "先决定走手机还是分行",
+          "text": "如果你是年满 18 岁、身在香港的内地居民，且未持有中银香港个人或联名储蓄、往来账户，可以先核对手机开户资格。官方要求有效内地身份证和港澳通行证，两份证件从申请日起均须至少还有 30 天有效期；还要提供国家移民管理局出具、包括申请日在内最近 7 日内发出的电子“出入境纪录”，以及内地手机号、地址、有效电邮和税务居民资料。具体资格以 App 当时显示为准。[1]\n手机申请无法完成，或需要办理手机渠道不支持的服务，就去分行咨询。视频作者基于个人经历，建议短期赴港的人优先安排分行，再考虑手机申请；这一顺序可以作为行程安排的参考，但分行能否接待、是否需要预约，应以选定分行的实时安排为准。内地身份证持有人若要开立投资账户，银行官网提示需亲临分行。[1]"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/acf04e78-059b-4b8f-b999-bd95c806f122.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "材料准备 做到真实且可核对",
+          "text": "出发前，至少把身份证、港澳通行证、内地手机号和电邮准备好。计划手机申请的话，提前下载官方 App，按要求取得电子出入境纪录原文件。视频还建议分行申请者备好入境凭证、近期住址证明、收入或资金来源资料；这些是减少来回补件的实用准备，但具体补充文件由银行按个案要求。\n填写开户目的、现居地址、通讯地址、职业及收入时，按实际情况回答，并确保能解释资金来源和预计用途。不要为了迎合所谓“标准答案”改写住址、收入或汇款用途。遇到不确定的表格选项，现场向职员确认。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ccc1fcf6-1aa9-4d8a-8c61-c47e04cd1f75.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "手机开户和收卡 看清两个时间点",
+          "text": "银行公布的手机流程是下载 App、完成身份认证、设定用户名称和密码、填写个人资料。若在服务时间内提交并成功开户，成年人一般可实时使用账户；银行随后还会进行内部审阅。开户成功不等于实体提款卡立即可用，具体状态以短信、邮件和 App 为准。[1]\n中银香港的开户常见问题写明：中银卡一般在成功开户后 4 个工作天内寄出；资料审阅期间卡片可暂时保持冻结，一般在 5 个工作天内启用。未收到卡，先核对通讯地址，再通过银行客服或分行处理。若计划在香港境外的 ATM 提款，相关限额预设为 0，还需另行设置。[2][3]"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/5eb721b4-5670-4dae-8a91-6744bb0e8ed2.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "同名汇款的免费条件 别只记住零手续费",
+          "text": "中银香港官网对个人客户的同名汇款列出明确条件：从中银香港通过网银或手机银行汇往内地中国银行同名账户，符合条件可豁免汇出基本手续费；由内地中国银行同名账户汇入中银香港，符合条件可豁免中银香港的汇入基本手续费。该优惠只覆盖指定基本手续费，代理行等其他费用不在豁免范围。[4]\n所以，操作前要核对收付款账户姓名、银行、币种、渠道、限额和最终费用。如果发生换汇，也要看实际汇率。香港本地的“转数快”和跨境汇款是不同服务，别把本地转账的免费规则直接套用到跨境交易。视频展示的小额到账速度，也不能保证每笔都同样快。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/5e9be991-4640-4eb4-9a44-72855a2bb66c.webp",
+          "title": "原文配图"
+        },
+        {
+          "type": "step",
+          "title": "申请未通过时 怎么处理",
+          "text": "先看银行通知是否提示补资料或另选渠道，再核对证件有效期、出入境纪录、个人信息和通讯方式。官方说明是：不符合手机开户条件，或申请无法通过手机完成，可亲临分行办理。[1] 银行会独立审核，材料齐全也不等于保证获批。\n最后提醒：视频里的“必须存入一万港币才能开”、固定分行名额、转账后必须等待 48 小时、每季度一定要转一笔等，都不应当成统一规定。办理前重新查看银行官网，转账前以页面显示的费用和汇率为准。\n资料核对日期：2026 年 11 月 12 日。本文为视频整理与公开信息汇总，不代表银行承诺或个案审批结果。\n核对来源\n[1] 中银香港 手机开户：查看官方页面\n[2] 中银香港 手机开户常见问题 2026 年 5 月版：查看官方页面\n[3] 中银香港 境外 ATM 提款限额说明：查看官方页面\n[4] 中银香港 汇款往来中国银行账户：查看官方页面\n[5] 中银香港 一般银行服务收费：查看官方页面"
+        },
+        {
+          "type": "related",
+          "url": "https://www.bochk.com/dam/more/accountopening/sc.html",
+          "title": "查看官方页面",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://www.bochk.com/dam/more/accountopening/images/faq_sc.pdf",
+          "title": "查看官方页面",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://www.bochk.com/m/sc/more/boccard/securityoverseas.html",
+          "title": "查看官方页面",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://www.bochk.com/m/tc/crossborder/personal/financialservicehk/remittance.html",
+          "title": "查看官方页面",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://www.bochk.com/sc/servicecharge.common.html",
+          "title": "查看官方页面",
+          "text": "打开原文链接"
+        }
+      ],
+      "category": "how",
+      "device": "通用",
+      "minutes": 8,
+      "tags": [
+        "中银"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 12,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "bochk-guide",
+      "revision": 1
+    },
+    {
+      "title": "注册 Google 账号：官方流程与安全设置",
+      "summary": "按原稿的五步流程创建账号，并检查验证问题和安全设置。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": "写在前面\n本文只整理 Google 账号帮助中心公开的注册流程与账号安全设置，全程使用官方渠道、官方功能。文中不涉及任何账号地区选择、网络环境设置或规避平台验证机制的做法。在中国大陆使用境外互联网服务，请遵守国家相关法律法规，并通过依法获批的渠道访问。\n网上关于\"注册谷歌账号\"的教程很多，动辄十几步，还夹着一堆\"提高成功率的技巧\"。但翻开 Google 官方帮助中心会发现，标准流程其实只有五步，手机号验证甚至明确标注为「可选」。\n这篇做两件事：把官方流程原原本本讲清楚，再把注册完成后真正该做的安全设置补齐。内容以官方帮助页面为准，功能名称和界面措辞可能随版本调整。"
+        },
+        {
+          "type": "step",
+          "title": "01 官方注册流程：五步",
+          "text": ""
+        },
+        {
+          "type": "step",
+          "title": "依据 Google 账号帮助中心「创建 Google 账号」整理的官方五步流程",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/912e2b97-a28e-4950-b54a-03360b765cd7.webp",
+          "title": "Google 账号官方注册流程五步图"
+        },
+        {
+          "type": "step",
+          "title": "第 1 步　打开创建账号页",
+          "text": "访问 accounts.google.com，点击「创建账号」。也可以在手机 Gmail App 里通过「添加其他账号 → Google → 创建账号」进入。"
+        },
+        {
+          "type": "step",
+          "title": "第 2 步　选择账号用途",
+          "text": "下拉菜单里有三个选项：个人用途、为我的孩子创建、工作或业务用途。按实际用途选即可。"
+        },
+        {
+          "type": "step",
+          "title": "第 3 步　确定登录邮箱",
+          "text": "可以从 Google 建议的 Gmail 地址里挑一个，也可以自定义 Gmail 用户名，还可以选择「使用现有邮箱」，用自己已有的非 Gmail 邮箱注册，验证该邮箱即可。"
+        },
+        {
+          "type": "step",
+          "title": "第 4 步　填写资料并设置密码",
+          "text": "姓名、出生日期、性别，然后设置用户名和密码。官方提示：提供准确的个人信息有助于保障账号安全；移动端输入密码时首字母不区分大小写。"
+        },
+        {
+          "type": "step",
+          "title": "第 5 步　验证手机号（可选）＋ 补齐恢复信息",
+          "text": "官方帮助页把这一步明确写为「可选：为您的账号添加电话号码并进行验证」。完成后按提示阅读并同意服务条款即可。\n关于出生日期：请如实填写。Google 对自行管理账号设有最低年龄要求（多数国家/地区为 13 周岁，部分地区更高）；未达年龄的，应由家长通过 Family Link 创建并管理受监督的账号，而不是改填其他年份。"
+        },
+        {
+          "type": "step",
+          "title": "02 三个常见误解",
+          "text": "① Gmail 不等于 Google 账号\nGmail 只是 Google 账号下的一项服务。同一个账号还能登录 YouTube、云端硬盘、日历、Google Play 等，账号本身不是\"一个邮箱地址\"。\n② 不一定需要手机号\n官方流程把电话验证标为可选；不过系统的防滥用机制有时仍会要求验证号码后才能继续，这两种情况都可能遇到，属于正常流程。\n③ 不必先申请一个 Gmail\n官方帮助页专门写了「使用现有邮箱」这一条：用 Outlook、iCloud 或其他服务商的邮箱也能创建 Google 账号，只是不会同时获得一个 Gmail 收件箱。"
+        },
+        {
+          "type": "step",
+          "title": "03 卡在手机号验证，官方怎么处理",
+          "text": "这两条提示很多人见过，它们的含义并不神秘——Google 为了防范滥用，会限制单个号码可创建的账号数和可用于验证的次数。官方帮助页给出的处理办法是：\n提示\n官方建议\n此电话号码无法用于进行验证\n换个号码；可使用家人、朋友（需经对方同意）或不同运营商的号码\n此电话号码用于验证的次数过多\n同样是换号，该提示限制的是验证次数\n一直没收到短信\n等待几分钟，或改用「接听电话」验证方式；费用取决于手机套餐\n如果验证环节反复不顺利，可以改走官方提供的「使用现有邮箱」路径，用已有邮箱完成验证；也可以直接查 Google 账号帮助中心的验证问题排查页。\n一个明确的边界：网上流传的\"改系统语言、清理 Cookie、无痕重试、切换网络环境提高成功率\"之类做法，本质是规避平台风控，本文不提供也不建议。这类限制是平台公开的安全措施，按官方口径处理即可。"
+        },
+        {
+          "type": "step",
+          "title": "04 注册完先做这 6 项设置",
+          "text": "账号建好只是开始。真正决定它会不会丢的，是接下来十分钟的设置：\n▸ 安全性检查（Security Checkup）：在 myaccount.google.com/security 集中查看恢复信息、已登录设备与第三方授权。\n▸ 两步验证：优先用通行密钥（Passkey），其次是 Google 提示、验证器 App，短信作为兜底。\n▸ 辅助邮箱与恢复电话：保持最新，忘记密码时能找回账号。\n▸ 备用验证码：生成后离线保存，手机丢失时用得上。\n▸ 清理旧设备与第三方授权：把不再使用的设备和应用授权移除。\n▸ 密码习惯：一站点一密码，验证码不告诉任何人，找回账号只走官方渠道。"
+        },
+        {
+          "type": "step",
+          "title": "05 合规使用，别踩这几条线",
+          "text": "· 遵守所在国家/地区的法律法规，以及平台的服务条款；在中国大陆访问境外互联网服务，应通过依法获批的渠道。\n· 如实填写注册资料，不为通过验证而虚构身份或年龄信息。\n· 不批量注册、不替他人代验、不买卖账号，这些都在平台明令限制的范围里。\n· 遇到异常登录提醒，第一时间改密码并跑一次安全性检查。\n资料来源（均为 Google 官方帮助页面）\n· 创建 Google 账号：support.google.com/accounts/answer/27441\n· 验证您的账号：support.google.com/accounts/answer/114129\n· 为孩子创建 Google 账号：support.google.com/families/answer/7103338\n· 账号安全设置入口：myaccount.google.com/security\n整理日期：2026 年 11 月。界面措辞与功能名称可能随版本调整，请以官方页面当前显示为准；未认证公众号粘贴后链接可能不可点击，地址已一并写出便于手动访问。"
+        },
+        {
+          "type": "related",
+          "url": "https://support.google.com/accounts/answer/27441",
+          "title": "support.google.com/accounts/answer/27441",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://support.google.com/accounts/answer/114129",
+          "title": "support.google.com/accounts/answer/114129",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://support.google.com/families/answer/7103338",
+          "title": "support.google.com/families/answer/7103338",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "related",
+          "url": "https://myaccount.google.com/security",
+          "title": "myaccount.google.com/security",
+          "text": "打开原文链接"
+        },
+        {
+          "type": "text",
+          "text": "流程本身很简单，\n难的是别被\"技巧\"带偏。\n走官方渠道、如实填资料、注册完补齐安全设置，\n这三件事比任何\"提高成功率\"的偏方都管用。\nE N D"
+        }
+      ],
+      "category": "basic",
+      "device": "通用",
+      "minutes": 8,
+      "tags": [
+        "Google"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 11,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "google-signup",
+      "revision": 1
+    },
+    {
+      "title": "用开发者工具查找并保存网页图片",
+      "summary": "在浏览器中打开网络面板，通过刷新、筛选和预览找到目标图片。",
+      "blocks": [
+        {
+          "type": "step",
+          "title": "开始前先看",
+          "text": "浏览网页时，你可能遇到过这样的情况：文章里提到了某张图片，页面却没有正常显示；或者图片能看到，点开后却找不到保存入口。\n这时，可以用浏览器自带的开发者工具，看看网页加载过哪些图片。听起来有点复杂，其实跟着下面几步操作就可以。"
+        },
+        {
+          "type": "step",
+          "title": "用开发者工具查找网页加载的图片",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/850d39f0-203f-4968-ba3f-14540e73b821.webp",
+          "title": "F12 查找网页图片示意"
+        },
+        {
+          "type": "step",
+          "title": "第一步 打开开发者工具",
+          "text": "先用电脑浏览器打开目标网页，然后按键盘上的 F12。\n浏览器侧边或底部会出现一个新面板，这就是开发者工具。如果按 F12 没反应，可以试试 Fn + F12；也可以在网页空白处点击鼠标右键，选择“检查”。"
+        },
+        {
+          "type": "step",
+          "title": "第二步 进入“网络”面板",
+          "text": "在开发者工具顶部，找到 “网络” 或 “Network”，点击进入。\n这个面板会记录网页加载时请求的内容，包括文字、脚本和图片。为了更快找到图片，可以再点击 “图片” 或 “Img” 分类。不同浏览器的界面略有区别，但名称通常相近。\n顶部标签栏中的「网络」（局部示意）"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/17db8614-fa2c-43cf-a693-dc2474aae28a.webp",
+          "title": "开发者工具 网络标签"
+        },
+        {
+          "type": "step",
+          "title": "第三步 列表是空的？刷新一下网页",
+          "text": "⚠️ 这是最容易漏掉的一步。\n如果你打开“网络”面板后什么也没看到，先不要关闭面板，直接按 F5 或点击浏览器的刷新按钮。网页重新加载后，图片请求通常就会出现在列表里。\n刷新按钮\n按 F5，或点击地址栏左侧的圆形箭头刷新。刷新时保持开发者工具面板处于打开状态，否则抓不到重新加载的请求。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/83aab618-71c8-447c-a507-dc8105d0ce55.webp",
+          "title": "浏览器刷新按钮"
+        },
+        {
+          "type": "step",
+          "title": "刚打开“网络”面板时，列表可能还是空的——刷新后才会出现请求",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/ddcecb5f-aeda-4f6f-b613-8dc6ebd859a6.webp",
+          "title": "网络面板列表为空"
+        },
+        {
+          "type": "step",
+          "title": "第四步 通过预览找到目标图片",
+          "text": "点开列表项，在「预览」中确认图片\n列表里可能有很多图片，包括头像、图标、广告图和正文配图。点击其中一项，查看右侧或下方的 “预览”（Preview），确认它是不是你要找的图片。\n如果列表很长，可以留意文件名、图片尺寸，或者逐项查看预览。"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/01bda81e-89c7-4dac-a448-0553e15939ae.webp",
+          "title": "网络面板 图片预览"
+        },
+        {
+          "type": "text",
+          "text": "找到目标后，打开该图片的地址，在图片页面点击鼠标右键，选择 “图片另存为” 即可保存。\n右键菜单中的「将图像另存为…」"
+        },
+        {
+          "type": "image",
+          "image": "/al-helper/media/823553a5-d15b-4a26-b48f-a3f7790340f0.webp",
+          "title": "右键菜单 将图像另存为"
+        },
+        {
+          "type": "step",
+          "title": "如果还是找不到呢？",
+          "text": "先确认网页里的图片是否真的加载成功。有些图片需要滚动到对应位置才会开始加载，可以把页面滚动到图片附近，再看“网络”列表是否出现新内容。也可以清除列表、重新刷新页面，减少查找时的干扰。\n还要注意：这个方法只能帮助你查找浏览器实际加载到的图片。如果图片本身已经失效，或者网页没有向浏览器加载它，“网络”面板里也不会凭空出现原图。\n下次遇到网页图片无法直接查看或保存时，记住这条简单路线：\nF12\n→\n网络\n→\n图片\n→\n刷新\n→\n预览\n→\n保存\n📌 保存图片前，也请确认自己有权使用。个人留存、转载和商用的授权要求可能不同。\nF12 不是程序员专属——\n它也是普通用户看清网页的一扇小窗。\nEND"
+        }
+      ],
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 8,
+      "tags": [
+        "F12"
+      ],
+      "layout": "steps",
+      "related": [],
+      "status": "新发布",
+      "order": 10,
+      "updateNote": "整理为分步图文教程",
+      "updated": "2026-11-15",
+      "id": "f12-images",
+      "revision": 1
+    },
+    {
+      "title": "找回刚下载却找不到的文件",
+      "summary": "从浏览器下载记录定位文件，少翻几个文件夹。",
+      "category": "fix",
+      "device": "电脑",
+      "minutes": 4,
+      "tags": [
+        "下载记录",
+        "找文件",
+        "浏览器"
+      ],
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "开始前的准备",
+          "text": "使用下载该文件时的电脑和浏览器"
+        },
+        {
+          "type": "step",
+          "title": "打开下载记录",
+          "text": "在 Edge 或 Chrome 浏览器中按 Ctrl + J。",
+          "success": "下载列表中出现文件名、下载状态等信息。",
+          "tip": ""
+        },
+        {
+          "type": "step",
+          "title": "找到对应的记录",
+          "text": "根据文件名或下载时间查找。对于下载失败的记录，回到可信的原网页重新下载。",
+          "success": "列表中的文件名与所需文件相符。",
+          "tip": "",
+          "image": "/al-helper/examples/search.svg"
+        },
+        {
+          "type": "step",
+          "title": "查看文件所在位置",
+          "text": "点击该记录的文件夹图标或“在文件夹中显示”。如果文件已被移动，使用文件资源管理器按名称搜索。",
+          "success": "文件资源管理器打开并选中目标文件。",
+          "tip": ""
+        },
+        {
+          "type": "success",
+          "title": "完成检查",
+          "text": "记下窗口上方的文件夹路径，确认能从这个位置再次找到文件。"
+        }
+      ],
+      "order": 5,
+      "updated": "2026-11-10",
+      "status": "新发布",
+      "related": [
+        "folder"
+      ],
+      "updateNote": "发布图文教程",
+      "revision": 1,
+      "id": "search"
+    },
+    {
+      "title": "解压下载的 ZIP 文件",
+      "summary": "从压缩包中取出完整文件，找到它们的存放位置。",
+      "category": "how",
+      "device": "电脑",
+      "minutes": 5,
+      "tags": [
+        "压缩包",
+        "解压",
+        "Windows"
+      ],
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "开始前的准备",
+          "text": "一份可信来源的 ZIP 压缩包\n确保保存位置有足够空间"
+        },
+        {
+          "type": "step",
+          "title": "找到下载好的压缩包",
+          "text": "打开文件资源管理器，在“下载”文件夹里找到扩展名为 .zip 的文件。",
+          "success": "可以看到你要处理的压缩包名称。",
+          "tip": ""
+        },
+        {
+          "type": "step",
+          "title": "选择提取位置",
+          "text": "右键点击 ZIP 文件，选择“全部解压缩”或“全部提取”，记下目标目录。",
+          "success": "窗口中列出了文件将要存入的文件夹。",
+          "tip": "",
+          "image": "/al-helper/examples/zip.svg"
+        },
+        {
+          "type": "step",
+          "title": "打开解压结果",
+          "text": "点击“提取”，等待结束，再打开目标文件夹。",
+          "success": "里面的文件可以独立打开。",
+          "tip": "需要密码时，向文件提供者索取正确密码。"
+        },
+        {
+          "type": "success",
+          "title": "完成检查",
+          "text": "关闭压缩包，直接从目标文件夹中打开一个文件。"
+        }
+      ],
+      "order": 3,
+      "updated": "2026-11-12",
+      "status": "新发布",
+      "related": [
+        "phone"
+      ],
+      "updateNote": "发布图文教程",
+      "revision": 1,
+      "id": "zip"
+    },
+    {
+      "title": "收藏网页，下次一键打开",
+      "summary": "把常用网页加入书签，再也不用重复搜索。",
+      "category": "basic",
+      "device": "电脑",
+      "minutes": 3,
+      "tags": [
+        "收藏夹",
+        "浏览器",
+        "书签"
+      ],
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "开始前的准备",
+          "text": "打开 Microsoft Edge 或 Chrome 浏览器\n打开你想保留的网页"
+        },
+        {
+          "type": "step",
+          "title": "打开收藏窗口",
+          "text": "按 Ctrl + D，浏览器会弹出收藏或添加书签的窗口。",
+          "success": "窗口中显示当前网页名称。",
+          "tip": ""
+        },
+        {
+          "type": "step",
+          "title": "给收藏改一个好找的名字",
+          "text": "输入“AL 的教程”，选择收藏夹栏或书签栏，点击“完成”。",
+          "success": "地址栏右边的星形图标变为实心。",
+          "tip": "",
+          "image": "/al-helper/examples/bookmark.svg"
+        },
+        {
+          "type": "step",
+          "title": "从收藏里重新打开",
+          "text": "新建标签页。按 Ctrl + Shift + B 显示书签栏，在栏中点击刚保存的名字。",
+          "success": "浏览器打开刚才收藏的页面。",
+          "tip": ""
+        },
+        {
+          "type": "success",
+          "title": "完成检查",
+          "text": "关闭原来的标签页后，仍可以通过收藏重新进入。"
+        }
+      ],
+      "order": 2,
+      "updated": "2026-11-13",
+      "status": "新发布",
+      "related": [
+        "zip"
+      ],
+      "updateNote": "发布图文教程",
+      "revision": 1,
+      "id": "bookmark"
+    },
+    {
+      "title": "截取屏幕并保存图片",
+      "summary": "学会用快捷键截取指定区域，留下需要的画面。",
+      "category": "tools",
+      "device": "电脑",
+      "minutes": 3,
+      "tags": [
+        "截图",
+        "快捷键",
+        "Windows"
+      ],
+      "blocks": [
+        {
+          "type": "checklist",
+          "title": "开始前的准备",
+          "text": "一台 Windows 10 或 11 电脑\n打开一个可以公开分享的练习画面"
+        },
+        {
+          "type": "step",
+          "title": "打开截图工具",
+          "text": "同时按 Windows 徽标键、Shift 和 S。屏幕变暗后选择矩形截图模式。",
+          "success": "鼠标指针变为十字。",
+          "tip": ""
+        },
+        {
+          "type": "step",
+          "title": "框选需要的区域",
+          "text": "从画面的一角按住鼠标左键，拖到对角后松开。",
+          "success": "截图进入剪贴板。",
+          "tip": "避开姓名、手机号、登录二维码等私人信息。",
+          "image": "/al-helper/examples/screenshot.svg"
+        },
+        {
+          "type": "step",
+          "title": "将截图存为图片",
+          "text": "打开“画图”，按 Ctrl + V 粘贴截图，按 Ctrl + Shift + S 另存为 PNG，选好位置并命名。",
+          "success": "保存位置中出现一张 PNG 图片。",
+          "tip": ""
+        },
+        {
+          "type": "success",
+          "title": "完成检查",
+          "text": "双击图片，确认文字清晰，截图范围正确。"
+        }
+      ],
+      "order": 1,
+      "updated": "2026-11-14",
+      "status": "已更新",
+      "related": [
+        "bookmark"
+      ],
+      "updateNote": "补充操作提示",
+      "revision": 1,
+      "id": "screenshot"
+    }
+  ],
+  "settings": {
+    "name": "AL的助手",
+    "logo": "",
+    "slogan": "不懂没关系，一步一步来。",
+    "description": "把复杂操作拆成简单步骤，跟着图文完成你的第一次尝试。",
+    "about": "AL的助手为零基础用户整理图文教程。你可以按设备、分类或关键词找到一个具体任务，跟随步骤练习。",
+    "hot": [
+      "订阅",
+      "教程",
+      "问题"
+    ],
+    "announcement": "",
+    "contact": "",
+    "footer": "AL的助手",
+    "social": [
+      {
+        "platform": "wechat",
+        "name": "AL的助手",
+        "account": "",
+        "qr": "",
+        "url": "",
+        "enabled": true
+      },
+      {
+        "platform": "douyin",
+        "name": "",
+        "account": "",
+        "qr": "",
+        "url": "",
+        "enabled": false
+      }
+    ],
+    "homeLayout": "map"
+  },
+  "route": [
+    {
+      "title": "基础准备",
+      "description": "从认识文件和文件夹开始",
+      "articleId": "folder"
+    },
+    {
+      "title": "选择教程",
+      "description": "找到适合自己的第一课",
+      "articleId": ""
+    },
+    {
+      "title": "跟着操作",
+      "description": "一步一步，完成小练习",
+      "articleId": "screenshot"
+    }
+  ],
+  "categories": [
+    {
+      "id": "basic",
+      "name": "入门基础",
+      "hidden": false,
+      "order": 0
+    },
+    {
+      "id": "tools",
+      "name": "工具使用",
+      "hidden": false,
+      "order": 1
+    },
+    {
+      "id": "how",
+      "name": "操作教程",
+      "hidden": false,
+      "order": 2
+    },
+    {
+      "id": "fix",
+      "name": "问题解决",
+      "hidden": false,
+      "order": 3
+    },
+    {
+      "id": "2db5556f-5df7-4a60-b112-6f6bfddd4b71",
+      "name": "订阅",
+      "hidden": false,
+      "order": 4
+    }
+  ]
+}
